@@ -4,7 +4,8 @@
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
-    "start": "gulp"
+    "start": "gulp",
+    "generatedb": "json-server -p 8001 db.js"
   },
   "devDependencies": {
     "babel-core": "^6.7.6",
@@ -31,7 +32,9 @@
     "webpack-stream": "^3.1.0"
   },
   "dependencies": {
+    "Faker": "^0.7.2",
     "axios": "^0.9.1",
+    "faker": "^3.1.0",
     "font-awesome": "^4.7.0",
     "material-ui": "^0.16.1",
     "normalize.scss": "^0.1.0",
@@ -39,6 +42,7 @@
     "react-dom": "^15.0.1",
     "react-redux": "^4.4.5",
     "react-router": "^2.0.1",
+    "react-tap-event-plugin": "^1.0.0",
     "redux": "^3.6.0"
   },
   "boilerplate": {

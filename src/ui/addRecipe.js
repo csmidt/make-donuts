@@ -9,9 +9,14 @@ import MenuItem from 'material-ui/MenuItem';
 
 
 const AddRecipe = React.createClass({
-//	handleChange = (event, index, value) => 
-//	 	this.setState({value})
+	getInitialState: () => ({
+		value: 1
+	}),
 
+	handleChange: function(event, index, value) {
+	 	this.setState({value})
+	},
+	
 	render: function() {
 		return (
 			<div className="AddRecipeDiv">
@@ -25,14 +30,20 @@ const AddRecipe = React.createClass({
 							
 					   	</div>
 					   	<div>
-					   		<input type="checkbox" id="public"/><label for="public">Make it Public</label>
-							<input type="checkbox" id="private"/><label for="private">Make it Private</label>
+					   		<input type="checkbox" id="public"/><label htmlFor="public">Make it Public</label>
+							<input type="checkbox" id="private"/><label htmlFor="private">Make it Private</label>
 					   		
 					   	</div>
 					   	<div className="howToCook">
 						    <input type="text" id="prepTime" className="addFields" placeholder="Prep Time"/>
 						    <input type="cookTime" id="cookTime" className="addFields" placeholder="Cook Time"/>
 						    <input type="cookTemp" id="cookTemp" className="addFields" placeholder="Cook Temp" />
+							<SelectField value={this.state.value} onChange={this.handleChange}>
+						        <MenuItem value={1} label="5 am - 12 pm" primaryText="Morning" />
+						        <MenuItem value={2} label="12 pm - 5 pm" primaryText="Afternoon" />
+						        <MenuItem value={3} label="5 pm - 9 pm" primaryText="Evening" />
+						        <MenuItem value={4} label="9 pm - 5 am" primaryText="Night" />
+						    </SelectField>
 						</div>
 					</div>   
 				    <div>

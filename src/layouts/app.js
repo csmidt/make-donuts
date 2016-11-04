@@ -10,10 +10,19 @@ export default React.createClass({
     return (
       <div className="app">
         <nav>
-        <Borders />
+          <Borders />
         </nav>
         <main>
-          {this.props.children}
+          <div className="sidebar">
+            <ul className="sidebarlist">
+              <li> My Recipes</li>
+              <li> Public Recipes</li>
+              <li> Popular Recipes</li>
+              <li> My Favorite Recipes</li>
+              <li> My Pantry</li>
+            </ul>
+          </div>
+          <div>{this.props.children}</div>
         </main>
       </div>
     )

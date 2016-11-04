@@ -5,6 +5,9 @@ html {
 *,*:after,*:before
 {box-sizing: inherit}
 
+main {
+	display: flex;
+}
 
 .header {
 	width:100%;
@@ -40,8 +43,7 @@ html {
 .sidebar {
 	width: 200px;
 	height: 500px;
-	background-color: #bfbfbf;
-	float: left;	
+	background-color: #bfbfbf;	
 }
 
 .sidebarlist {
@@ -95,5 +97,9 @@ html {
 	margin-top: 50px;
 	width: 500px;
 	height: 1200px;
-	margin-left: 250px;
+	margin-left: 20px;
+}
+
+.recipeProfileHeader {
+	margin-top: 10px;
 }

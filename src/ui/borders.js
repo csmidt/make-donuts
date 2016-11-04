@@ -20,16 +20,7 @@ const Borders = React.createClass({
 							</ul>
 						</li>	
 					</ul>
-				</div>
-				<div className="sidebar">
-					<ul className="sidebarlist">
-						<li> My Recipes</li>
-						<li> Public Recipes</li>
-						<li> Popular Recipes</li>
-						<li> My Favorite Recipes</li>
-						<li> My Pantry</li>
-					</ul>
-				</div>
+				</div>	
 			</div>
 		)
 	}

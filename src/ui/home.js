@@ -35,7 +35,12 @@ const SummaryContainer =  React.createClass({
 const SummaryView = React.createClass({
  navToAddRecipe: function(e) {
   e.preventDefault()
-  hashHistory.push('/addRecipe/1')
+  hashHistory.push("/addRecipe/1")
+  },
+
+  navToRecipeProfile: function(e) {
+    e.preventDefault()
+    hashHistory.push("/recipeProfile/1")
   },
 
 	render:function(){
@@ -54,6 +59,7 @@ const SummaryView = React.createClass({
 					})}
 							<li>
 								<button onClick={this.navToAddRecipe}> Add Recipe </button>
+                <button onClick={this.navToRecipeProfile}> Recipe Profiles </button>
 							</li>
 				</ul>
 			</div>
