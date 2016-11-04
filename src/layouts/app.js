@@ -10,7 +10,7 @@ export default React.createClass({
     return (
       <div className="app">
         <nav>
-        <Borders />
+          <Borders />
         </nav>
         <main>
           {this.props.children}

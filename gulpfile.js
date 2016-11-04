@@ -18,7 +18,7 @@ gulp.task('webpack', function () {
 // JSON API Server - run a REST server via a simple json file
 gulp.task('serve:api', function (cb) {
   var apiServer = jsonServer.create();
-  var router = jsonServer.router(db());
+  var router = jsonServer.router('db.json');
 
   apiServer.use(jsonServer.defaults());
   apiServer.use(router);

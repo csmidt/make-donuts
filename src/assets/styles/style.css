@@ -40,6 +40,7 @@ html {
 	width: 200px;
 	height: 500px;
 	background-color: #bfbfbf;	
+	float: left;
 }
 
 .sidebarlist {
@@ -70,4 +71,8 @@ html {
 .AddRecipeDiv {
 	margin-left: 250px;
 	margin-top: -480px;
+}
+
+.recipeProfileHeader {
+	margin-top: 10px;
 }

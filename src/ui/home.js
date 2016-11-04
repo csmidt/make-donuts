@@ -12,19 +12,19 @@ const SummaryContainer =  React.createClass({
     }
   },
 
-  componentWillReceiveProps(props) {
-  	getRecipes(props.params.id)
+  // componentWillReceiveProps(props) {
+  	// getRecipes(props.params.id)
 
-  		this.unsubscribe = store.subscribe(() => {
-  			const state = store.getState()
-  			this.setState({
-  				recipes: state.recipes
-  			})
-  		})
-  },
-  componentWillUnmount: function () {
-  	this.unsubscribe()
-  },
+  	// 	this.unsubscribe = store.subscribe(() => {
+  	// 		const state = store.getState()
+  	// 		this.setState({
+  	// 			recipes: state.recipes
+  	// 		})
+  	// 	})
+  // },
+  // componentWillUnmount: function () {
+  // 	this.unsubscribe()
+  // },
   render:function () {
   	return (
   		<SummaryView recipes={this.state.recipes} />
@@ -35,7 +35,12 @@ const SummaryContainer =  React.createClass({
 const SummaryView = React.createClass({
  navToAddRecipe: function(e) {
   e.preventDefault()
-  hashHistory.push('/addRecipe/:id')
+  hashHistory.push("/addRecipe/1")
+  },
+
+  navToRecipeProfile: function(e) {
+    e.preventDefault()
+    hashHistory.push("/recipeProfile/1")
   },
 
 	render:function(){
@@ -54,6 +59,7 @@ const SummaryView = React.createClass({
 					})}
 							<li>
 								<button onClick={this.navToAddRecipe}> Add Recipe </button>
+                <button onClick={this.navToRecipeProfile}> Recipe Profiles </button>
 							</li>
 				</ul>
 			</div>
