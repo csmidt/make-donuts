@@ -1,16 +1,53 @@
 {
-  "users": [
+  "recipes": [
     {
       "id": 1,
-      "name": "Mike"
-    },
-    {
-      "id": 2,
-      "name": "Jeff"
-    },
-    {
-      "id": 3,
-      "name": "Gabe"
+      "image": "",
+      "name": "",
+      "creator": "",
+      "scope": "",
+      "mealType": "",
+      "recipeCategoryId": "",
+      "prep_Time": "",
+      "cook_Time": "",
+      "cook_Temp": "",
+      "degree_Units": "",
+      "portion": "",
+      "portion_type": "",
+      "instructions": [
+          {
+            "stepId": 1,
+            "auis": [{
+              "amount_units": "" ,
+              "units": "",
+              "ingredient": ""
+            },
+            {
+              "amount_units": "",
+              "units": "",
+              "ingredient": ""
+            }
+        ],
+            
+            "directions": ""
+          },
+          
+          {
+            "stepId": 2,
+            
+            "auis": [{ 
+              "amount_units": "",
+              "units": "",
+              "ingredients": ""
+              }],
+
+            "directions": ""
+          }
+      ],
+      "personalNotes": ""
+
     }
+  ],
+  "recipeCategories": [
   ]
 }

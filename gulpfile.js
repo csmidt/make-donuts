@@ -3,6 +3,10 @@ var webpack = require('webpack-stream');
 var serve = require('gulp-serve');
 var config = require('config');
 var jsonServer = require('json-server');
+var db = require('./db')
+
+
+// var db = require('./db')
 
 // Webpack
 gulp.task('webpack', function () {
@@ -14,7 +18,7 @@ gulp.task('webpack', function () {
 // JSON API Server - run a REST server via a simple json file
 gulp.task('serve:api', function (cb) {
   var apiServer = jsonServer.create();
-  var router = jsonServer.router('db.json');
+  var router = jsonServer.router(db());
 
   apiServer.use(jsonServer.defaults());
   apiServer.use(router);
