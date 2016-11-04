@@ -2,7 +2,7 @@ import axios from 'axios'
 import store from 'store'
 import recipeReducer from 'Reducers/recipeReducer'
 import * as actions from 'actions'
-import { hashHistory } from 'reacy-router'
+import { hashHistory } from 'react-router'
 
 axios.defaults.baseURL = 'http://localhost:8001/'
 

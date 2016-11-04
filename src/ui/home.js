@@ -2,7 +2,7 @@ import React from 'react'
 import { Link, hashHistory } from 'react-router'
 import * as actions from 'actions'
 import store from 'store'
-import { get Recipes } from 'api/recipesapi'
+import { getRecipes } from 'api/recipesapi'
 
 
 const SummaryContainer =  React.createClass({
@@ -16,7 +16,7 @@ const SummaryContainer =  React.createClass({
   	getRecipes(props.params.id)
 
   		this.unsubscribe = store.subscribe(() => {
-  			cosnt state = store.getState()
+  			const state = store.getState()
   			this.setState({
   				recipes: state.recipes
   			})
@@ -33,9 +33,14 @@ const SummaryContainer =  React.createClass({
 })
 
 const SummaryView = React.createClass({
+ navToAddRecipe: function(e) {
+  e.preventDefault()
+  hashHistory.push('/addRecipe/:id')
+  },
+
 	render:function(){
 		return (
-			<div>
+			<div className="homepage">
 				<h3>My Recipes</h3>
 				<ul className="recipeView">
 					{this.props.recipes.map(recipe => {
@@ -48,7 +53,7 @@ const SummaryView = React.createClass({
 						)
 					})}
 							<li>
-								<button onClick={this.navToRecipe}> Add Recipe </button>
+								<button onClick={this.navToAddRecipe}> Add Recipe </button>
 							</li>
 				</ul>
 			</div>
