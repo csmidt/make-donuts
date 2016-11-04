@@ -5,6 +5,7 @@ html {
 *,*:after,*:before
 {box-sizing: inherit}
 
+
 .header {
 	width:100%;
 	height:100px;
@@ -39,7 +40,8 @@ html {
 .sidebar {
 	width: 200px;
 	height: 500px;
-	background-color: #bfbfbf;	
+	background-color: #bfbfbf;
+	float: left;	
 }
 
 .sidebarlist {
@@ -56,18 +58,42 @@ html {
 	font-family: 'Cormorant Garamond', serif;
 }
 
-.homepage {
-	margin-left: 250px;
-	margin-top: -480px;
+.recipeView {
+	list-style: none;
 }
 
+.formfields {
+	display: flex;
+	flex-wrap: wrap;
+
+}
+.image {
+	width: 300px;
+	height: 300px;
+}
 .addFields {
-	border:1px solid #fff;
+	border:1px solid #aaa;
 	height: 30px;
-	width: 50px;
+	width: 200px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.howToCook {
+	display: flex;
+	flex-direction: row;
+	margin-top: 20px;
+}
+
+.textArea {
+	width: 500px;
+	height:100px;
+	margin-top: 10px;
 }
 
 .AddRecipeDiv {
+	margin-top: 50px;
+	width: 500px;
+	height: 1200px;
 	margin-left: 250px;
-	margin-top: -480px;
 }
