@@ -4,7 +4,8 @@
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
-    "start": "gulp"
+    "start": "gulp",
+    "generatedb": "json-server -p 8001 db.js"
   },
   "devDependencies": {
     "babel-core": "^6.7.6",
@@ -32,6 +33,7 @@
   },
   "dependencies": {
     "axios": "^0.9.1",
+    "faker": "^3.1.0",
     "font-awesome": "^4.7.0",
     "material-ui": "^0.16.1",
     "normalize.scss": "^0.1.0",

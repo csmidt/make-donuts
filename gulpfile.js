@@ -3,6 +3,10 @@ var webpack = require('webpack-stream');
 var serve = require('gulp-serve');
 var config = require('config');
 var jsonServer = require('json-server');
+var db = require('./db')
+
+
+// var db = require('./db')
 
 // Webpack
 gulp.task('webpack', function () {
