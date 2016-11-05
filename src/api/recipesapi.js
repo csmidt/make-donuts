@@ -6,11 +6,21 @@ import { hashHistory } from 'react-router'
 
 axios.defaults.baseURL = 'http://localhost:8001/'
 
-export function getRecipes() {
-	return axios.get('recipes').then(resp => {
+export function getRecipe(id) {
+	return axios.get(`recipes/${id}`).then(resp => {
+		console.log('getRecipe()', resp.data)
 		store.dispatch({
-			type: actions.GET_RECIPES,
-			recipes: resp.data
+			type: 'GET_RECIPE',
+			recipe: resp.data
+		})
+	})
+}
+
+export function getRecipes() {
+	return axios.get(`recipes/${id}`).then(resp => {
+		console.log("getRecipes()", resp.data)
+		store.dispatch({
+			type: 'GET_RECIPES',
 		})
 	})
 }

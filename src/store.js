@@ -1,10 +1,7 @@
-/*import { createStore } from 'redux'
-import { recipeReducer } from 'reducers/recipeReducer'
+import { createStore } from 'redux'
+import recipeReducer from 'reducers/recipeReducer'
 
 
 const store = createStore(recipeReducer)
 
-
-
-export default 
-*/
+export default store
