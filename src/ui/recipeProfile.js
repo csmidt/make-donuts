@@ -16,11 +16,22 @@ import FlatButton from 'material-ui/FlatButton'
 // })
 
 const CardExampleWithAvatar = () => (
-  <Card>
+  <Card
+  	name="recipeProfileHeader"
+  	style={{
+  		width: '870px',
+  		margin: '16px 200px',
+  		boxShadow: 'none'
+	}}
+	>
     <CardHeader
-      title="URL Avatar"
-      subtitle="Subtitle"
-      avatar="images/jsa-128.jpg"
+      title="The Most Awesome Chocolate Chip Cookies" 
+      subtitle="By Rashida" 
+      name="recipeProfileHeaderTitle"
+      style={{
+      	textAlign: 'center',
+      	fontSize: '50px'
+      }}
     />
     <CardMedia
       overlay={<CardTitle title="Overlay title" subtitle="Overlay subtitle" />}

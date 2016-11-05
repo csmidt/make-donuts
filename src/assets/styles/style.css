@@ -101,6 +101,7 @@ main {
 	margin-left: 20px;
 }
 
-.recipeProfileHeader {
-	margin-top: 10px;
+.recipeProfileHeaderTitle {
+	font-size: 25px !important;
+
 }
