@@ -1,6 +1,5 @@
 import axios from 'axios'
 import store from 'store'
-import recipeReducer from 'Reducers/recipeReducer'
 import * as actions from 'actions'
 import { hashHistory } from 'react-router'
 
@@ -17,10 +16,11 @@ export function getRecipe(id) {
 }
 
 export function getRecipes() {
-	return axios.get(`recipes/${id}`).then(resp => {
+	return axios.get("recipes").then(resp => {
 		console.log("getRecipes()", resp.data)
 		store.dispatch({
 			type: 'GET_RECIPES',
+			recipes: resp.data
 		})
 	})
 }

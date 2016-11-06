@@ -43,6 +43,11 @@ const SummaryView = React.createClass({
     hashHistory.push("/recipeProfile/1")
   },
 
+  navToGridList: function(e) {
+    e.preventDefault()
+    hashHistory.push("/gridListExample")
+  },
+
 	render:function(){
 		return (
 			<div className="homepage">
@@ -58,6 +63,7 @@ const SummaryView = React.createClass({
 						)
 					})}
 							<li>
+                <button onClick={this.navToGridList}> Grid List </button>
 								<button onClick={this.navToAddRecipe}> Add Recipe </button>
                 <button onClick={this.navToRecipeProfile}> Recipe Profiles </button>
 							</li>

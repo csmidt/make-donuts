@@ -12,8 +12,6 @@ const RecipeProfileContainer = React.createClass({
 		}
 	},
 
-
-
 	componentWillMount: function() { 
 		getRecipe(this.props.params.id)
 
@@ -38,31 +36,35 @@ const RecipeProfileContainer = React.createClass({
 	}
 })
 
-const RecipeProfileHeader = () => (
-   <Card
-    name="recipeProfileHeader"
-    style={{
-      width: '870px',
-      margin: '16px 200px',
-      boxShadow: 'none'
-  }}
-  >
-    <CardHeader
-      title={this.props.recipeName}
-      subtitle="By Rashida" 
-      name="recipeProfileHeaderTitle"
-      style={{
-        textAlign: 'center',
-        fontSize: '50px'
-      }}
-    />
-    <CardMedia
-      overlay={<CardTitle title="Overlay title" subtitle="Overlay subtitle" />}
-    >
-      <img src="" />
-    </CardMedia>
-  </Card>
-)
+const RecipeProfileHeader = React.createClass({
+ render: function() {
+    return (
+     <Card
+         name="recipeProfileHeader"
+         style={{
+           width: '870px',
+           margin: '16px 200px',
+           boxShadow: 'none'
+       }}
+       >
+       <CardHeader
+         title={this.props.recipeName}
+         subtitle="By Rashida" 
+         name="recipeProfileHeaderTitle"
+         style={{
+           textAlign: 'center',
+           fontSize: '50px'
+         }}
+       />
+       <CardMedia
+         overlay={<CardTitle title="Overlay title" subtitle="Overlay subtitle" />}
+       >
+         <img src="http://lorempixel.com/640/480/food" />
+       </CardMedia>
+     </Card>
+   )
+ }  
+})
 
 export default RecipeProfileContainer;
 
