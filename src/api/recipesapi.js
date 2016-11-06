@@ -25,18 +25,20 @@ export function getRecipes() {
 	})
 }
 
-export function addNewRecipe (newRecipeObj) {
-	return axios.post('recipes', newRecipeObj).then (resp => {
-		hashHistory.push("/")
-	})
-}
-
 export function getFavoriteRecipes() {
 	return axios.get("recipes?recipeCategoryId=Favorite").then(resp => {
 		console.log("getFavoriteRecipes() api", resp.data)
 		store.dispatch({
 			type: 'GET_FAVORITE_RECIPES',
 			favorite_Recipes: resp.data
+
+export function addRecipe(obj) {
+	return axios.post("recipes", obj).then(resp => {
+		console.log("addRecipe()", resp.data)
+		store.dispatch({
+			type: 'ADD_RECIPE',
+			recipe: resp.data
+
 		})
 	})
 }
