@@ -30,3 +30,13 @@ export function addNewRecipe (newRecipeObj) {
 		hashHistory.push("/")
 	})
 }
+
+export function getFavoriteRecipes() {
+	return axios.get("recipes?recipeCategoryId=Favorite").then(resp => {
+		console.log("getFavoriteRecipes() api", resp.data)
+		store.dispatch({
+			type: 'GET_FAVORITE_RECIPES',
+			favorite_Recipes: resp.data
+		})
+	})
+}
