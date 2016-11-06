@@ -11,7 +11,9 @@ export default function(state= initialState, action) {
 			return {...state, recipes:action.recipes}
 		case(actions.GET_CURRENT_RECIPE:
 			return{...state, currentRecipe:action.recipe}
+		case actions.
 		default:
+
 			return state
 
 	}

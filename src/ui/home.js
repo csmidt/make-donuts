@@ -3,6 +3,9 @@ import { Link, hashHistory } from 'react-router'
 import * as actions from 'actions'
 import store from 'store'
 import { getRecipes } from 'api/recipesapi'
+import {GridList, GridTile} from 'material-ui/GridList';
+import IconButton from 'material-ui/IconButton';
+import StarBorder from 'material-ui/svg-icons/toggle/star-border';
 
 
 const SummaryContainer =  React.createClass({

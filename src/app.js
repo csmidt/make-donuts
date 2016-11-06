@@ -8,12 +8,12 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 // http://stackoverflow.com/a/34015469/988941
 injectTapEventPlugin();
 
-
 // Layouts
 import App from 'layouts/app';
 import Home from 'ui/home'
 import AddRecipe from 'ui/addRecipe'
 import RecipeProfile from 'ui/recipeProfile'
+
 
 ReactDOM.render((
 	<MuiThemeProvider>

@@ -14,3 +14,9 @@ export function getRecipes() {
 		})
 	})
 }
+
+export function addNewRecipe (newRecipeObj) {
+	return axios.post('recipes', newRecipeObj).then (resp => {
+		hashHistory.push("/")
+	})
+}
