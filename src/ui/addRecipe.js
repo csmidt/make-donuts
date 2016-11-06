@@ -6,6 +6,7 @@ import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
 import TextField from 'material-ui/TextField'
 import RaisedButton from 'material-ui/RaisedButton'
+import { addRecipe } from 'api/recipesapi'
 
 //Styling for submit button
 const style = {
@@ -16,27 +17,48 @@ const style = {
 }
 
 const AddRecipe = React.createClass({
-	getInitialState: () => ({
-		value: 1
-	}),
-
-	handleChange: function(event, index, value) {
-	 	this.setState({value})
+	getInitialState: function() {
+		return {
+			recipe_Name: ""
+		}
 	},
-	
+
+	update: function(e) {
+		var obj = this.state
+		var id = e.target.id
+		obj[id] = e.target.value
+
+		this.setState(obj);
+	},
+
+	updateRecipes: function() {
+		var obj = {
+			recipe_Name: this.state.recipe_Name
+		}
+
+		addRecipe(obj).then(resp => {
+			hashHistory.push("/")
+		})
+		console.log("added recipe", obj)
+	},
+
+
 	render: function() {
 		return (
 			<div className="AddRecipeDiv">
 				<h3>Basic Info</h3>
 				<form>
 				    <TextField
+				      id="recipe_Name"
 				      hintText="Recipe Name"
 				      floatingLabelText="Enter Recipe Name Here"
 				      fullWidth={true}
+				      value={this.state.recipe_Name}
+				      onChange={this.update}
 				    />
 				</form>
 				<div>
-				    <RaisedButton label="Primary" primary={true} style={style.button} />
+				    <RaisedButton label="Primary" primary={true} style={style.button} onClick={this.updateRecipes}/>
 				 </div>
 			</div>	
 		)
@@ -44,6 +66,11 @@ const AddRecipe = React.createClass({
 })
 export default AddRecipe
 
+// value: 1 "this is a value for getInitialState for material UI select fields"
+
+// handleChange: function(event, index, value) {
+//  	this.setState({value})
+// }, "this is a handle property used for select fields"
 
 
 
