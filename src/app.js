@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { Router, Route, hashHistory } from 'react-router';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import GridListExample from 'ui/gridListExample'
 
 // Needed for onTouchTap
 // http://stackoverflow.com/a/34015469/988941
@@ -20,6 +21,7 @@ ReactDOM.render((
 		<Router history={hashHistory}>
 			<Route component={ App }>
 				 <Route component={ Home } path="/" />
+				 <Route component={ GridListExample } path="/gridListExample"/>
 				 <Route component={ AddRecipe } path="/addRecipe/:id" />
 				 <Route component={ RecipeProfile } path="/recipeProfile/:id"/>
 			</Route>
