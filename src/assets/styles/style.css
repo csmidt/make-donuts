@@ -1,5 +1,6 @@
 html {
 	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
 }
 
 *,*:after,*:before
@@ -121,8 +122,9 @@ main {
 	margin-left: 20px;
 }
 
-.recipeProfileHeader {
-	margin-top: 10px;
+.recipeProfileHeaderTitle {
+	font-size: 25px !important;
+
 }
 
 .recipeType {

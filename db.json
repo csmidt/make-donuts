@@ -3,7 +3,7 @@
     {
       "id": 0,
       "image": "http://lorempixel.com/640/480/food",
-      "recipe_Name": "Ciabatta",
+      "recipe_Name": "iced coffee",
       "by": "Blanca Cummings",
       "scope": "Public",
       "recipe_Type": "Breakfast",
@@ -32,7 +32,7 @@
     {
       "id": 1,
       "image": "http://lorempixel.com/640/480/food",
-      "recipe_Name": "Ciabatta",
+      "recipe_Name": "vanilla waffers",
       "by": "Baron Krajcik",
       "scope": "Public",
       "recipe_Type": "Breakfast",
