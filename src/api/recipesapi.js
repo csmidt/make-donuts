@@ -24,3 +24,13 @@ export function getRecipes() {
 		})
 	})
 }
+
+export function addRecipe() {
+	return axios.post("recipes").then(resp => {
+		console.log("addRecipe()", resp.data)
+		store.dispatch({
+			type: 'ADD_RECIPE',
+			recipe: resp.data
+		})
+	})
+}
