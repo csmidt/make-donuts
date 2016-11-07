@@ -20,45 +20,173 @@ const style = {
 const AddRecipe = React.createClass({
 	getInitialState: function() {
 		return {
-			recipe_Name: ""
+			image: "",
+			recipe_Name: "",
+			recipe_Type: "",
+			by: "",
+			prep_Time:"",
+			cook_Time:"",
+			cook_Temp:"",
+			portion_Amount:"",
+			portion_Type:"",
+			step_Amount: "",
+		    units: "",
+		    ingredient: "",
+		    personal_Notes: ""
+			
+			
+			
 		}
 	},
 
-	update: function(e) {
-		var obj = this.state
-		var id = e.target.id
-		obj[id] = e.target.value
-		this.setState(obj);
-	},
-
-	updateRecipes: function() {
+	updateRecipes: function(e) {
+		e.preventDefault()
 		var obj = {
-			recipe_Name: this.state.recipe_Name
+			image: this.state.image,
+			recipe_Name: this.state.recipe_Name,
+			by: this.state.by,
+			recipe_Type: this.state.recipe_Type,
+			prep_Time: this.state.prep_Time,
+			cook_Time: this.state.cook_Time,
+			cook_Temp: this.state.cook_Temp,
+			portion_Amount: this.state.portion_Amount,
+			portion_Type: this.state.portion_Type,
+			step_Amount: this.state.step_Amount,
+			units: this.state.units,
+			ingredient: this.state.ingredient,
+			personal_Notes: this.state.personal_Notes
+		
 		}
 
 		addRecipe(obj).then(resp => {
 			hashHistory.push("/")
 		})
-		console.log("added recipe", obj)
+		console.log("COMPONENT FUNCTION: updateRecipes()", obj)
 	},
+
+	update: function(e) {
+		var obj = {}
+		var id = e.target.id
+		obj[id] = e.target.value
+		this.setState(obj);
+	},
+
+	
 
 
 	render: function() {
 		return (
 			<div className="AddRecipeDiv">
 				<h3>Basic Info</h3>
-				<form>
+				<form onSubmit={this.updateRecipes}>
+					 <TextField
+                      id="image"
+                      hintText="Add Image url here"
+                      floatingLabelText="Add image URL here."
+                      fullWidth={true}
+                      value={this.state.image}
+                      onChange={this.update}
+                    />
 				    <TextField
 				      id="recipe_Name"
 				      hintText="Recipe Name"
-				      floatingLabelText="Enter Recipe Name Here"
+				      floatingLabelText="Enter recipe name here."
 				      fullWidth={true}
 				      value={this.state.recipe_Name}
 				      onChange={this.update}
 				    />
+				     <TextField
+				      id="by"
+				      hintText="By"
+				      floatingLabelText="Enter chef's name here."
+				      fullWidth={true}
+				      value={this.state.by}
+				      onChange={this.update}
+				    />
+				    <TextField   
+				      id="recipe_Type"   
+				      hintText="Breakfast, Lunch, Dinner, dessert"
+					  floatingLabelText="Enter the type of recipe here."
+					  fullWidth={true}
+					  value={this.state.recipe_Type}
+					  onChange={this.update}
+					/>
+				    <TextField   
+				      id="prep_Time"   
+				      hintText="Prep Time"
+					  floatingLabelText="Enter prep time here."
+					  fullWidth={true}
+					  value={this.state.prep_Time}
+					  onChange={this.update}
+					/>
+				    <TextField
+                      id="cook_Time"
+                      hintText="Cook Time"
+                      floatingLabelText="Enter cook time here."
+                      fullWidth={true}
+                      value={this.state.cook_Time}
+                      onChange={this.update}
+                    />
+                    <TextField
+                      id="cook_Temp"
+                      hintText="Cook Temp"
+                      floatingLabelText="Enter cook temperature here."
+                      fullWidth={true}
+                      value={this.state.cook_Temp}
+                      onChange={this.update}
+                    />
+                    <TextField   
+                      id="portion_Amount"
+                      hintText="Amount"
+                      floatingLabelText="Enter recipe yeild amount here."
+                      fullWidth={true}
+                      value={this.state.portion_Amount}  
+                      onChange={this.update} />
+                    <TextField
+                      id="portion_Type"
+                      hintText="Type"
+                      floatingLabelText="Cookies, loaves, etc..."
+                      fullWidth={true}
+                      value={this.state.portion_Type}
+                      onChange={this.update}
+                    />
+                    <TextField
+                      id="step_Amount"
+                      hintText="Enter quantity of ingredient here."
+                      floatingLabelText="1,2,3 etc..."
+                      fullWidth={true}
+                      value={this.state.step_Amount}
+                      onChange={this.update}
+                    />
+                     <TextField
+                      id="units"
+                      hintText="Enter unit of measure here."
+                      floatingLabelText="Cups, TBS, tsp, etc..."
+                      fullWidth={true}
+                      value={this.state.units}
+                      onChange={this.update}
+                    />
+                    <TextField
+                      id="ingredient"
+                      hintText="Ingredient"
+                      floatingLabelText="Enter ingredient here."
+                      fullWidth={true}
+                      value={this.state.ingredient}
+                      onChange={this.update}
+                    />
+                    <TextField
+                      id="personal_Notes"
+                      hintText="Personal Notes"
+                      floatingLabelText="Tell us about your recipe!"
+                      fullWidth={true}
+                      value={this.state.personal_Notes}
+                      onChange={this.update}
+                    />
+                  
+
 				</form>
 				<div>
-				    <RaisedButton label="Primary" primary={true} style={style.button} onClick={this.updateRecipes}/>
+				    <RaisedButton label="Submit Recipe" primary={true} style={style.button} onClick={this.updateRecipes}/>
 				 </div>
 			</div>	
 		)

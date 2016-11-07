@@ -31,10 +31,44 @@ export function getFavoriteRecipes() {
 		store.dispatch({
 			type: 'GET_FAVORITE_RECIPES',
 			favorite_Recipes: resp.data
+		})
+	})
+}
+
+export function getPublicRecipes() {
+	return axios.get("recipes?recipeCategoryId=Public").then(resp => {
+		console.log("getPublicRecipes() api", resp.data)
+		store.dispatch({
+			type: 'GET_PUBLIC_RECIPES',
+			public_Recipes: resp.data
+		})
+	})
+}
+
+export function getPopularRecipes() {
+	return axios.get("recipes?recipeCategoryId=Popular").then(resp => {
+		console.log("getPopularRecipes() api", resp.data)
+		store.dispatch({
+			type: "GET_POPULAR_RECIPES",
+			popular_Recipes: resp.data
+		})
+
+	})
+}
+
+export function getMyPantry() {
+	return axios.get("recipes?recipeCategoryId=My Pantry").then(resp => {
+		console.log("getMyPantry() api", resp.data)
+		store.dispatch({
+			type: "GET_MY_PANTRY",
+			my_Pantry: resp.data
+		})
+	})
+}
 
 export function addRecipe(obj) {
 	return axios.post("recipes", obj).then(resp => {
-		console.log("addRecipe()", resp.data)
+		console.log("API CALL: addRecipe()", resp.data)
 		store.dispatch({
 			type: 'ADD_RECIPE',
 			recipe: resp.data

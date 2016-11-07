@@ -1,4 +1,6 @@
 export const GET_RECIPES = 'GET_RECIPES'
 export const GET_CURRENT_RECIPE = 'GET_CURRENT_RECIPE'
-export const addNewRecipe = 'addNewRecipe'
-export const GET_FAVORITE_RECIPE = 'GET_FAVORITE_RECIPEs'
+export const GET_FAVORITE_RECIPES = 'GET_FAVORITE_RECIPES'
+export const GET_PUBLIC_RECIPES = 'GET_PUBLIC_RECIPES'
+export const GET_POPULAR_RECIPES = 'GET_POPULAR_RECIPES'
+export const GET_MY_PANTRY = 'GET_MY_PANTRY'
