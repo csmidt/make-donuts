@@ -27,7 +27,7 @@ export function getRecipes() {
 
 export function addRecipe(obj) {
 	return axios.post("recipes", obj).then(resp => {
-		console.log("addRecipe()", resp.data)
+		console.log("API CALL: addRecipe()", resp.data)
 		store.dispatch({
 			type: 'ADD_RECIPE',
 			recipe: resp.data

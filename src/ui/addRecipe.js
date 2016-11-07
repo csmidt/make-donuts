@@ -19,7 +19,8 @@ const style = {
 const AddRecipe = React.createClass({
 	getInitialState: function() {
 		return {
-			recipe_Name: ""
+			recipe_Name: "",
+			recipe_By: ""
 		}
 	},
 
@@ -33,13 +34,14 @@ const AddRecipe = React.createClass({
 
 	updateRecipes: function() {
 		var obj = {
-			recipe_Name: this.state.recipe_Name
+			recipe_Name: this.state.recipe_Name,
+			recipe_By: this.state.recipe_By
 		}
 
 		addRecipe(obj).then(resp => {
 			hashHistory.push("/")
 		})
-		console.log("added recipe", obj)
+		console.log("COMPONENT FUNCTION: updateRecipes()", obj)
 	},
 
 
@@ -54,6 +56,14 @@ const AddRecipe = React.createClass({
 				      floatingLabelText="Enter Recipe Name Here"
 				      fullWidth={true}
 				      value={this.state.recipe_Name}
+				      onChange={this.update}
+				    />
+				    <TextField
+				      id="recipe_By"
+				      hintText="By"
+				      floatingLabelText="Enter Recipe Author Here"
+				      fullWidth={true}
+				      value={this.state.recipe_By}
 				      onChange={this.update}
 				    />
 				</form>
