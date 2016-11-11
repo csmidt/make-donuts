@@ -191,14 +191,18 @@ const RecipeDirections = React.createClass({
         <div className="recipeDiretionsHeader"><span className="stepHeader">Step 2</span></div>
         <div className="recipeDirectionsContent">
           <div className="recipeInsturctions">Reiciendis quis aut ad nemo. Est excepturi corrupti autem. Mollitia qui laudantium saepe eos. Iste non laboriosam atque quo eum sit magnam eum iusto.</div>
-          <table className="recipeIngredientTable">
-            <tbody>
-              <tr className="recipeIngredientRow">
-                <td className="recipeIngredientCell">1/2 cup</td>
-                <td className="recipeIngredientCell">Sugar</td>
-              </tr>  
-            </tbody>            
-          </table>
+              <table className="recipeIngredientTable">
+                <tbody>
+                  <tr className="recipeIngredientRow">
+                    <td className="recipeIngredientCell1"><span className="ingredientCell1">1/2 cup</span></td>
+                    <td className="recipeIngredientCell2">Sugar</td>
+                  </tr> 
+                  <tr className="recipeIngredientRow">
+                    <td className="recipeIngredientCell1"><span className="ingredientCell1">1/2 cup</span></td>
+                    <td className="recipeIngredientCell2">Sugar</td>
+                  </tr>  
+                </tbody>            
+              </table>
         </div>
       </div>
     )                
@@ -210,10 +214,10 @@ const RecipeDirections = React.createClass({
 export default RecipeProfileContainer
 
 
-// {this.props.AUIs.map (item => {
-//           return (
-//             <div key={item.id}>step {item.step_Amount}</div>
-//           )
-//         })}
+  // {this.props.AUIs.map (item => {
+  //             return (
+  //               <div key={item.id}>step {item.step_Amount}</div>
+  //             )
+  //           })}
 
  
