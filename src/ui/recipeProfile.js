@@ -170,6 +170,7 @@ const RecipeCard = React.createClass({
           <tr>
             <td colSpan="2" className="tableRow">{this.props.portion_Amount} {this.props.portion_Type}</td>
           </tr>
+            {console.log('auis',this.props.AUIs)}
             {this.props.AUIs.map (item => {
               return(
                 <tr key={item.id}>
@@ -192,15 +193,16 @@ const RecipeDirections = React.createClass({
         <div className="recipeDirectionsContent">
           <div className="recipeInsturctions">Reiciendis quis aut ad nemo. Est excepturi corrupti autem. Mollitia qui laudantium saepe eos. Iste non laboriosam atque quo eum sit magnam eum iusto.</div>
               <table className="recipeIngredientTable">
-                <tbody>
-                  <tr className="recipeIngredientRow">
-                    <td className="recipeIngredientCell1"><span className="ingredientCell1">1/2 cup</span></td>
-                    <td className="recipeIngredientCell2">Sugar</td>
-                  </tr> 
-                  <tr className="recipeIngredientRow">
-                    <td className="recipeIngredientCell1"><span className="ingredientCell1">1/2 cup</span></td>
-                    <td className="recipeIngredientCell2">Sugar</td>
-                  </tr>  
+                <tbody> 
+                  {this.props.AUIs.map (item => {
+                    return (
+                      <tr className="recipeIngredientRow">
+                        <td className="recipeIngredientCell1"><span className="ingredientCell1">{item.step_Amount} {item.units}</span></td>
+                        <td className="recipeIngredientCell2">{item.ingredient}</td>
+                      </tr> 
+                    )
+                   })}
+                  
                 </tbody>            
               </table>
         </div>
@@ -214,10 +216,13 @@ const RecipeDirections = React.createClass({
 export default RecipeProfileContainer
 
 
-  // {this.props.AUIs.map (item => {
-  //             return (
-  //               <div key={item.id}>step {item.step_Amount}</div>
-  //             )
-  //           })}
+// <tr className="recipeIngredientRow">
+  // <td className="recipeIngredientCell1"><span className="ingredientCell1">1/2 cup</span></td>
+  // <td className="recipeIngredientCell2">Sugar</td>
+// </tr> 
+// <tr className="recipeIngredientRow">
+  // <td className="recipeIngredientCell1"><span className="ingredientCell1">1/2 cup</span></td>
+  // <td className="recipeIngredientCell2">Sugar</td>
+// </tr>  
 
  

@@ -230,14 +230,17 @@ td {
 	margin-right: 7%;
 	line-height: 1.9;
 	color: #8B8B8B;
-	width: 44%;
+	width: 54%;
 	display: inline-block;
+	position: absolute;
 }
 
 .recipeIngredientTable {
 	border-collapse: collapse;
 	width: 36%;
 	display: inline-block;
+	position: absolute;
+	right: 0;
 }
 
 .recipeIngredientCell1 {
@@ -266,3 +269,6 @@ td {
 	border-bottom: none;
 }
 
+.recipeDirectionsContent {
+	position: relative;
+}
