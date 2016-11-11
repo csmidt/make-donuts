@@ -105,3 +105,151 @@ main {
 	font-size: 25px !important;
 
 }
+
+.recipeProfileContainer {
+	width: 84.5%;
+}
+
+.table {
+	border-left: 1px solid #e6e6e6;
+	border-top: 1px solid #e6e6e6;
+	border-bottom: 1px solid #e6e6e6;
+	width: 200px;
+	padding: 20px;
+	font-size: 30px;
+	color: #a6a6a6;
+}
+
+.headerRow {
+	display: flex;
+	margin-left: 22%;
+}
+
+.table:nth-child(4) {
+	border-right: 1px solid #e6e6e6;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.table:first-child {
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+.recipeCardTable {
+	margin-top: 31px;
+	margin-left: 22%;
+	border: 1px solid black;
+	width: 800px;
+	border-radius: 5px;
+	border: 1px solid #e6e6e6;
+	border-collapse: collapse;
+
+}
+
+.topRow {
+	font-size: 12px;
+}
+
+td {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 15px;
+	border-bottom: 1px solid #e6e6e6;
+	border-right: 1px solid #e6e6e6;
+	border-collapse: collapse;
+	background: #FAFAFA;
+	font-size: 30px;
+	color: #8B8B8B;
+}
+
+.ingridentTable1Col {
+	padding-left: 56px;
+}
+
+.ingridentTable2Col {
+	width: 100%;
+}
+
+.ingredientRow {
+	width: 100%;
+}
+
+.col1span {
+	right: 10px;
+	bottom: 20px;
+	width: 100px;
+	display: flex;
+}
+
+.col2span {
+	padding-left: 5px;
+	width: 1000px;
+}
+
+.space {
+	margin-left: 5px;
+}
+
+.tableRow{
+	background: #e6e6e6;
+}
+
+.recipeDirections {
+	margin-top: 50px;
+	margin-left: 19%;
+}
+
+.recipeDiretionsHeader {
+	font-size: 30px;
+	color: #8B8B8B;
+	margin-left: 4%;
+	margin-top: 25px;
+	position: relative;
+	z-index: 0;
+}
+
+.recipeDiretionsHeader:after {
+	content:"";
+    position:absolute;
+    top:50%;
+    left:0;
+    right:0;
+    border-top:solid 1px #bfbfbf;
+    z-index:-1;
+    margin-right: 6%
+}
+
+.stepHeader {
+    background:#fff;
+    display:inline-block;
+    padding-right: 40px;
+}
+
+.recipeInsturctions {
+	margin-left: 4%;
+	margin-top: 2%;
+	margin-right: 12%;
+	line-height: 1.9;
+	color: #8B8B8B;
+	width: 44%;
+	display: inline-block;
+}
+
+.recipeIngredientTable {
+	border-collapse: collapse;
+	width: 36%;
+	display: inline-block;
+}
+
+.recipeIngredientCell {
+	font-size: 20px;
+	width: 50%;
+}
+
+.recipeIngredientTable, .recipeIngredientTable > tr, .recipeIngredientTable > td {
+} 
+
+.recipeDiretionsHeader {
+	display: inline-block;
+}

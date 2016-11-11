@@ -13,8 +13,13 @@ export default function(state=DefaultState, action) {
 		case 'GET_RECIPE': 
 			return {...state, recipe: action.recipe}
 
+		
 		case 'ADD_RECIPE':
 			return {...state, recipe: action.recipe}
+
+
+		case 'GET_AUIS':
+			return {...state, AUIs: action.AUIs}
 
 		default:
 			return state

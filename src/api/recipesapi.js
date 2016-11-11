@@ -34,3 +34,13 @@ export function addRecipe(obj) {
 		})
 	})
 }
+
+export function getAUIs(id) {
+	return axios.get(`auis?stepId=${id}`).then(resp => {
+		console.log('getAUIs()', resp)
+		store.dispatch({
+			type: 'GET_AUIS',
+			AUIs: resp.data
+		})
+	})
+}
