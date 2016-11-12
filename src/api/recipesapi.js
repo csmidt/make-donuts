@@ -34,8 +34,9 @@ export function addRecipe(obj) {
 	})
 }
 
-export function getAUIs(id) {
-	return axios.get(`auis?stepId=${id}`).then(resp => {
+export function getAUIs() {
+	return axios.get("auis").then(resp => {
+		console.log('getAUIs()',resp.data)
 		store.dispatch({
 			type: 'GET_AUIS',
 			AUIs: resp.data
@@ -45,7 +46,6 @@ export function getAUIs(id) {
 
 export function getStep(id) {
 	return axios.get(`steps?recipeId=${id}`).then(resp => {
-		console.log('getStep()', resp.data)
 		store.dispatch({
 			type: 'GET_STEP',
 			step: resp.data

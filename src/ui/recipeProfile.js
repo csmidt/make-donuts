@@ -25,7 +25,7 @@ const RecipeProfileContainer = React.createClass({
 
 	componentWillMount: function() { 
 		getRecipe(this.props.params.id)
-    getAUIs(this.props.params.id)
+    getAUIs()
     getStep(this.props.params.id)
 
     this.unsubscribe = store.subscribe(() => {
@@ -210,16 +210,15 @@ const RecipeDirections = React.createClass({
                                 <td key={"b" + item.id} className="recipeIngredientCell1"><span className="ingredientCell1">{item.step_Amount} {item.units}</span></td>
                                 <td key={"c" + item.id} className="recipeIngredientCell2">{item.ingredient}</td>
                               </tr> 
-                              )
-                            } 
-                         })}
+                            )
+                          }                           
+                        })}
                       </tbody>            
                     </table>
                 </div>
               </div>
             )
             })} 
-          
         </div>
     )                
   }

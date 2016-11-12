@@ -246,11 +246,11 @@ td {
 	text-align: right;
 	padding-right: 25px;
 	background: #ffffff;
+	max-width: 500px;
 }
 
 .recipeIngredientCell2 {
 	width: 50%;
-	padding: 0px 37px;
 	font-size: 19px;
 	background: #ffffff;
 	border-right: none;

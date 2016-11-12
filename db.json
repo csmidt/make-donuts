@@ -43,42 +43,55 @@
       "directions": "Reiciendis quis aut ad nemo. Est excepturi corrupti autem. Mollitia qui laudantium saepe eos. Iste non laboriosam atque quo eum sit magnam eum iusto."
     },
     {
-      "id": 2,
+      "id": 4,
       "recipeId": 1,
       "stepNumber": 2,
       "directions": "Adipisci quaerat ea fugiat maxime. Inventore et eligendi temporibus enim nihil maiores et id. Commodi dolorum ut provident rerum quis ullam aut. Iste ut sunt. Quo praesentium adipisci accusamus."
-    }         
+    },     
+    {
+      "id": 5,
+      "recipeId": 1,
+      "stepNumber": 3,
+      "directions": "Adipisci quaerat ea fugiat maxime. Inventore et eligendi temporibus enim nihil maiores et id. Commodi dolorum ut provident rerum quis ullam aut. Iste ut sunt. Quo praesentium adipisci accusamus."
+    }       
   ],
             
   "auis": [
     {
-      "id": 4,
+      "id": 6,
       "stepId": 1,
       "step_Amount": 2,
       "units": "cups",
       "ingredient": "Beef"  
     },
     {
-      "id": 5,
+      "id": 7,
       "stepId": 1,
       "step_Amount": 2,
       "units": "cups",
       "ingredient": "sweet sour sauce"
     },     
     {
-      "id": 6,
-      "stepId": 1,
+      "id": 8,
+      "stepId": 2,
       "step_Amount": 3,
       "units": "sticks",
       "ingredient": "butter"  
     },
     {
-      "id": 7,
-      "stepId": 1,
+      "id": 9,
+      "stepId": 2,
       "step_Amount": "1/2",
       "units": "teaspoons",
       "ingredient": "sugar"
-    }    
+    },
+    {
+      "id": 10,
+      "stepId": 3,
+      "step_Amount": "1/2",
+      "units": "loafs",
+      "ingredient": "sweet sour sauce"
+    }       
   ]
 }
 
