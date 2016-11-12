@@ -5,21 +5,8 @@ import { hashHistory } from 'react-router'
 
 axios.defaults.baseURL = 'http://localhost:8001/'
 
-// export function getFullRecipie(id, stepId) {
-// 	return axios.get(`recipes/${id}`).then(resp => {
-// 		return axios.get(`auis?stepId=${id}`).then(resp2 => {
-// 			store.dispatch({
-// 				type:'GET_FULL_RECIPE',
-// 				recipe: resp.data,
-// 				AUIs: resp2.data
-// 			})
-// 		})
-// 	})
-// }
-
 export function getRecipe(id) {
 	return axios.get(`recipes/${id}`).then(resp => {
-		console.log('getRecipe()', resp.data)
 		store.dispatch({
 			type: 'GET_RECIPE',
 			recipe: resp.data
@@ -49,10 +36,19 @@ export function addRecipe(obj) {
 
 export function getAUIs(id) {
 	return axios.get(`auis?stepId=${id}`).then(resp => {
-		console.log('getAUIs()', resp.data)
 		store.dispatch({
 			type: 'GET_AUIS',
 			AUIs: resp.data
+		})
+	})
+}
+
+export function getStep(id) {
+	return axios.get(`steps?recipeId=${id}`).then(resp => {
+		console.log('getStep()', resp.data)
+		store.dispatch({
+			type: 'GET_STEP',
+			step: resp.data
 		})
 	})
 }

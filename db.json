@@ -39,11 +39,13 @@
     {
       "id": 3,
       "recipeId": 1,
+      "stepNumber": 1,
       "directions": "Reiciendis quis aut ad nemo. Est excepturi corrupti autem. Mollitia qui laudantium saepe eos. Iste non laboriosam atque quo eum sit magnam eum iusto."
     },
     {
       "id": 2,
-      "recipeId": 2,
+      "recipeId": 1,
+      "stepNumber": 2,
       "directions": "Adipisci quaerat ea fugiat maxime. Inventore et eligendi temporibus enim nihil maiores et id. Commodi dolorum ut provident rerum quis ullam aut. Iste ut sunt. Quo praesentium adipisci accusamus."
     }         
   ],
@@ -62,7 +64,21 @@
       "step_Amount": 2,
       "units": "cups",
       "ingredient": "sweet sour sauce"
-    }        
+    },     
+    {
+      "id": 6,
+      "stepId": 1,
+      "step_Amount": 3,
+      "units": "sticks",
+      "ingredient": "butter"  
+    },
+    {
+      "id": 7,
+      "stepId": 1,
+      "step_Amount": "1/2",
+      "units": "teaspoons",
+      "ingredient": "sugar"
+    }    
   ]
 }
 

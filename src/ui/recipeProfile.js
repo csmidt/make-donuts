@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router'
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card'
 import FlatButton from 'material-ui/FlatButton'
-import { getRecipe, getAUIs } from 'api/recipesapi'
+import { getRecipe, getAUIs, getStep } from 'api/recipesapi'
 import store from 'store'
 
 const RecipeProfileContainer = React.createClass({
@@ -18,13 +18,15 @@ const RecipeProfileContainer = React.createClass({
       degree_Units: "",
       portion_Amount: "",
       portion_Type: "",
-      AUIs: []
+      AUIs: [],
+      step: []
 		}
 	},
 
 	componentWillMount: function() { 
 		getRecipe(this.props.params.id)
     getAUIs(this.props.params.id)
+    getStep(this.props.params.id)
 
     this.unsubscribe = store.subscribe(() => {
       const appState = store.getState()
@@ -40,10 +42,8 @@ const RecipeProfileContainer = React.createClass({
         degree_Units: appState.recipe.degree_Units,
         portion_Amount: appState.recipe.portion_Amount,
         portion_Type: appState.recipe.portion_Type,
-        AUIs: appState.AUIs
-        // step_Amount: appState.AUIs.step_Amount
-        // units: appState.AUIs.units,
-        // ingredient: appState.AUIs.ingredient
+        AUIs: appState.AUIs,
+        step: appState.step
 
       })
     })    
@@ -82,11 +82,15 @@ const RecipeProfileContainer = React.createClass({
           portion_Amount={this.state.portion_Amount}
           portion_Type={this.state.portion_Type}
           AUIs={this.state.AUIs}
-          // units={this.state.units}
-          // ingredient={this.state.ingredient}
+
           />
 
-        <RecipeDirections AUIs={this.state.AUIs}/>
+        <RecipeDirections 
+
+          AUIs={this.state.AUIs}
+          step={this.state.step}
+
+          />
 
       </div>
 
@@ -170,7 +174,6 @@ const RecipeCard = React.createClass({
           <tr>
             <td colSpan="2" className="tableRow">{this.props.portion_Amount} {this.props.portion_Type}</td>
           </tr>
-            {console.log('auis',this.props.AUIs)}
             {this.props.AUIs.map (item => {
               return(
                 <tr key={item.id}>
@@ -188,25 +191,36 @@ const RecipeCard = React.createClass({
 const RecipeDirections = React.createClass({
   render: function() {
     return (
-      <div className="recipeDirections">
-        <div className="recipeDiretionsHeader"><span className="stepHeader">Step 2</span></div>
-        <div className="recipeDirectionsContent">
-          <div className="recipeInsturctions">Reiciendis quis aut ad nemo. Est excepturi corrupti autem. Mollitia qui laudantium saepe eos. Iste non laboriosam atque quo eum sit magnam eum iusto.</div>
-              <table className="recipeIngredientTable">
-                <tbody> 
-                  {this.props.AUIs.map (item => {
-                    return (
-                      <tr className="recipeIngredientRow">
-                        <td className="recipeIngredientCell1"><span className="ingredientCell1">{item.step_Amount} {item.units}</span></td>
-                        <td className="recipeIngredientCell2">{item.ingredient}</td>
-                      </tr> 
-                    )
-                   })}
-                  
-                </tbody>            
-              </table>
+        <div className="recipeDirections">
+           {this.props.step.map (item => {
+            {var stepNumber= item.stepNumber}
+            {console.log('stepNumber', stepNumber)}
+            return(
+              <div key={"d" + item.id} className="fullStep">
+                <div className="recipeDiretionsHeader"><span className="stepHeader">Step {item.stepNumber}</span></div>
+                <div className="recipeDirectionsContent">
+                  <div className="recipeInsturctions">{item.directions}</div>
+                    <table className="recipeIngredientTable">
+                      <tbody> 
+                        {this.props.AUIs.map (item => {
+                          console.log('item.stepId', item.stepId)
+                          if (stepNumber === item.stepId) {
+                            return (
+                              <tr key={"a" + item.id} className="recipeIngredientRow">
+                                <td key={"b" + item.id} className="recipeIngredientCell1"><span className="ingredientCell1">{item.step_Amount} {item.units}</span></td>
+                                <td key={"c" + item.id} className="recipeIngredientCell2">{item.ingredient}</td>
+                              </tr> 
+                              )
+                            } 
+                         })}
+                      </tbody>            
+                    </table>
+                </div>
+              </div>
+            )
+            })} 
+          
         </div>
-      </div>
     )                
   }
 })
@@ -214,6 +228,8 @@ const RecipeDirections = React.createClass({
 
 
 export default RecipeProfileContainer
+
+ 
 
 
 // <tr className="recipeIngredientRow">
