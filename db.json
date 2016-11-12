@@ -50,7 +50,7 @@
     },     
     {
       "id": 5,
-      "recipeId": 1,
+      "recipeId": 2,
       "stepNumber": 3,
       "directions": "Adipisci quaerat ea fugiat maxime. Inventore et eligendi temporibus enim nihil maiores et id. Commodi dolorum ut provident rerum quis ullam aut. Iste ut sunt. Quo praesentium adipisci accusamus."
     }       
@@ -73,21 +73,21 @@
     },     
     {
       "id": 8,
-      "stepId": 2,
+      "stepId": 1,
       "step_Amount": 3,
       "units": "sticks",
       "ingredient": "butter"  
     },
     {
       "id": 9,
-      "stepId": 2,
+      "stepId": 1,
       "step_Amount": "1/2",
       "units": "cups",
       "ingredient": "sugar"
     },
     {
       "id": 10,
-      "stepId": 3,
+      "stepId": 1,
       "step_Amount": "1/2",
       "units": "loafs",
       "ingredient": "sweet sour sauce"

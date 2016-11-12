@@ -291,7 +291,22 @@ td {
 .editButton {
 	position: absolute;
 	right: 30%;
-    margin-top: 6%;
+    margin-top: 5%;
+    padding-top: 10px;
+    padding-left: 13px;
     color: #8B8B8B;
     font-size: 20px;
+    height: 53px;
+    width: 165px;
+    background: #FFFFFF;
+    border-radius: 2%;
 }
+
+.editButton:hover {
+	background: #CCCCCC;
+	color: #FFFFFF;
+	transition: color 1s;
+	transition: background 2s;
+}
+
+
