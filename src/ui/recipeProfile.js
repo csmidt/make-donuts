@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router'
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card'
 import RaisedButton from 'material-ui/RaisedButton'
+import FontIcon from 'material-ui/FontIcon'
 import { getRecipe, getAUIs, getStep } from 'api/recipesapi'
 import store from 'store'
 
@@ -99,7 +100,6 @@ const RecipeProfileContainer = React.createClass({
           />
 
         <SubmitButtons />
-
       </div>
 
 		)	
@@ -135,7 +135,20 @@ const styles = {
 
   buttonChild: {
     lineHeight: 3
+  },
+
+  adjustButton: {
+    position: 'absolute',
+    right: '30%',
+    width: '7%',
+    height: '4%',
+  },
+
+  adjustButtonChild: {
+    height: '100%',
+    paddingBottom: '10px'
   }
+
 }
 
 
@@ -193,7 +206,16 @@ const RecipeCard = React.createClass({
       <table className="recipeCardTable">
         <tbody>
           <tr>
-            <td colSpan="2" className="tableRow">{this.props.portion_Amount} {this.props.portion_Type}</td>
+            <td colSpan="2" className="tableRow">{this.props.portion_Amount} {this.props.portion_Type} 
+              <RaisedButton 
+              label="Adjust" 
+              style={styles.adjustButton} 
+              buttonStyle={styles.adjustButtonChild}
+              backgroundColor="#504f4f"
+              labelColor="#FFFFFF"
+              icon={<FontIcon className="material-icons" color="#cccccc">create</FontIcon>}
+              />
+            </td>
           </tr>
             {this.props.AUIs.map (item => {
               return(
