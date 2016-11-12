@@ -283,3 +283,15 @@ td {
 	color: #8B8B8B;
 	width: 77%;
 }
+
+.submitButtonContainer {
+	position: relative;
+}
+
+.editButton {
+	position: absolute;
+	right: 30%;
+    margin-top: 6%;
+    color: #8B8B8B;
+    font-size: 20px;
+}

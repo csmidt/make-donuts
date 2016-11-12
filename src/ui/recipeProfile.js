@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router'
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card'
-import FlatButton from 'material-ui/FlatButton'
+import RaisedButton from 'material-ui/RaisedButton'
 import { getRecipe, getAUIs, getStep } from 'api/recipesapi'
 import store from 'store'
 
@@ -98,6 +98,8 @@ const RecipeProfileContainer = React.createClass({
           personal_Notes={this.state.personal_Notes}
           />
 
+        <SubmitButtons />
+
       </div>
 
 		)	
@@ -120,6 +122,19 @@ const styles = {
     height: '386px',
     borderRadius: '5px',
     margin: 'auto'
+  },
+
+  button: {
+    position: 'absolute',
+    right: '16%',
+    marginTop: '5%',
+    marginBottom: '15%',
+    width: '10%',
+    height: '50px'
+  },
+
+  buttonChild: {
+    lineHeight: 3
   }
 }
 
@@ -240,6 +255,25 @@ const PersonalNotes = React.createClass({
           {this.props.personal_Notes}
         </div>
 
+      </div>
+    )
+  }
+})
+
+const SubmitButtons = React.createClass({
+  render: function() {
+    return (
+      <div className="submitButtonContainer">
+        <div className="editButton">
+          Edit this recipe
+        </div>
+        <RaisedButton 
+            label="Start" 
+            style={styles.button} 
+            buttonStyle={styles.buttonChild}
+            backgroundColor="#504f4f"
+            labelColor="#FFFFFF"
+            />
       </div>
     )
   }
