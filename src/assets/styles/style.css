@@ -193,12 +193,12 @@ td {
 	background: #e6e6e6;
 }
 
-.recipeDirections {
+.recipeDirections, .personalNotes {
 	margin-top: 50px;
 	margin-left: 17%;
 }
 
-.recipeDiretionsHeader {
+.recipeDiretionsHeader, .personalNotesHeader {
 	font-size: 30px;
 	color: #8B8B8B;
 	margin-left: 4%;
@@ -208,7 +208,7 @@ td {
 	width: 83%;
 }
 
-.recipeDiretionsHeader:after {
+.recipeDiretionsHeader:after, .personalNotesHeader:after {
 	content:"";
     position:absolute;
     top:47%;
@@ -216,10 +216,10 @@ td {
     right:0;
     border-top:solid 1px #bfbfbf;
     z-index:-1;
-    margin-right: 6%
+    margin-right: 7%
 }
 
-.stepHeader {
+.stepHeader, .noteHeader {
     background:#fff;
     display:inline-block;
     padding-right: 40px;
@@ -274,4 +274,12 @@ td {
 
 .fullStep {
 	position: relative;
+}
+
+.personalNotesContent {
+	margin-left: 4%;
+	margin-top: 2%;
+	line-height: 1.9;
+	color: #8B8B8B;
+	width: 77%;
 }

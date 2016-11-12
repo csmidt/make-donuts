@@ -19,7 +19,8 @@ const RecipeProfileContainer = React.createClass({
       portion_Amount: "",
       portion_Type: "",
       AUIs: [],
-      step: []
+      step: [],
+      personal_Notes: ""
 		}
 	},
 
@@ -43,7 +44,8 @@ const RecipeProfileContainer = React.createClass({
         portion_Amount: appState.recipe.portion_Amount,
         portion_Type: appState.recipe.portion_Type,
         AUIs: appState.AUIs,
-        step: appState.step
+        step: appState.step,
+        personal_Notes: appState.recipe.personal_Notes
 
       })
     })    
@@ -90,6 +92,10 @@ const RecipeProfileContainer = React.createClass({
           AUIs={this.state.AUIs}
           step={this.state.step}
 
+          />
+
+        <PersonalNotes 
+          personal_Notes={this.state.personal_Notes}
           />
 
       </div>
@@ -194,7 +200,6 @@ const RecipeDirections = React.createClass({
         <div className="recipeDirections">
            {this.props.step.map (item => {
             {var stepNumber= item.stepNumber}
-            {console.log('stepNumber', stepNumber)}
             return(
               <div key={"d" + item.id} className="fullStep">
                 <div className="recipeDiretionsHeader"><span className="stepHeader">Step {item.stepNumber}</span></div>
@@ -221,6 +226,22 @@ const RecipeDirections = React.createClass({
             })} 
         </div>
     )                
+  }
+})
+
+const PersonalNotes = React.createClass({
+  render: function() {
+    return (
+      <div className="personalNotes">
+        <div className="personalNotesHeader">
+          <span className="noteHeader">Personal Notes</span>
+        </div>
+        <div className="personalNotesContent">
+          {this.props.personal_Notes}
+        </div>
+
+      </div>
+    )
   }
 })
 
