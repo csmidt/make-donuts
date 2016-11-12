@@ -165,6 +165,7 @@ td {
 
 .ingridentTable1Col {
 	padding-left: 56px;
+	width: 37%;
 }
 
 .ingridentTable2Col {
@@ -246,7 +247,7 @@ td {
 	text-align: right;
 	padding-right: 25px;
 	background: #ffffff;
-	max-width: 500px;
+	min-width: 200px;
 }
 
 .recipeIngredientCell2 {
