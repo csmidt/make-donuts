@@ -6,7 +6,13 @@ import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
 import TextField from 'material-ui/TextField'
 import RaisedButton from 'material-ui/RaisedButton'
-import { addRecipe } from 'api/recipesapi'
+import { addRecipe, addStep } from 'api/recipesapi'
+//checkbox
+import Checkbox from 'material-ui/Checkbox';
+import ActionFavorite from 'material-ui/svg-icons/action/favorite';
+import ActionFavoriteBorder from 'material-ui/svg-icons/action/favorite-border';
+import Visibility from 'material-ui/svg-icons/action/visibility';
+import VisibilityOff from 'material-ui/svg-icons/action/visibility-off';
 
 
 //Styling for submit button
@@ -14,8 +20,21 @@ const style = {
   margin: 12,
   button: {
   	backgroundColor: "#00FF00"	
-  }
+  },
+
 }
+
+const styles = {
+  customWidth: {
+    width: 150,
+  },
+   block: {
+    maxWidth: 250,
+  },
+  checkbox: {
+    marginBottom: 16,
+  },
+} 
 
 const AddRecipe = React.createClass({
 	getInitialState: function() {
@@ -23,55 +42,64 @@ const AddRecipe = React.createClass({
 			image: "",
 			recipe_Name: "",
 			recipe_Type: "",
+			scope:"",
+			degree_Units: "",
 			by: "",
 			prep_Time:"",
 			cook_Time:"",
 			cook_Temp:"",
 			portion_Amount:"",
 			portion_Type:"",
-			step_Amount: "",
-		    units: "",
-		    ingredient: "",
-		    personal_Notes: ""
-			
-			
-			
+		    personal_Notes: "",
+		  			
 		}
 	},
-
+	
 	updateRecipes: function(e) {
 		e.preventDefault()
 		var obj = {
 			image: this.state.image,
 			recipe_Name: this.state.recipe_Name,
 			by: this.state.by,
+			scope: this.state.scope,
 			recipe_Type: this.state.recipe_Type,
+			degree_Units: this.state.degree_Units,
 			prep_Time: this.state.prep_Time,
 			cook_Time: this.state.cook_Time,
 			cook_Temp: this.state.cook_Temp,
 			portion_Amount: this.state.portion_Amount,
 			portion_Type: this.state.portion_Type,
-			step_Amount: this.state.step_Amount,
-			units: this.state.units,
-			ingredient: this.state.ingredient,
-			personal_Notes: this.state.personal_Notes
-		
+			personal_Notes: this.state.personal_Notes,
 		}
 
-		addRecipe(obj).then(resp => {
-			hashHistory.push("/")
-		})
+		addRecipe(obj)
 		console.log("COMPONENT FUNCTION: updateRecipes()", obj)
 	},
 
 	update: function(e) {
 		var obj = {}
 		var id = e.target.id
-		obj[id] = e.target.value
+		var value = e.target.value
+		obj[id] = value
 		this.setState(obj);
 	},
 
-	
+	scopeChange: function(event, index, value) {
+		this.setState({
+			scope: value
+		})
+	},
+	recipeChange: function(event, index, value) {
+		this.setState({
+			recipe_Type: value
+		})
+	},
+
+	degreeChange: function (event, index, value) {
+		this.setState({
+			degree_Units: value
+		})
+	},
 
 
 	render: function() {
@@ -103,14 +131,25 @@ const AddRecipe = React.createClass({
 				      value={this.state.by}
 				      onChange={this.update}
 				    />
-				    <TextField   
-				      id="recipe_Type"   
-				      hintText="Breakfast, Lunch, Dinner, dessert"
-					  floatingLabelText="Enter the type of recipe here."
-					  fullWidth={true}
-					  value={this.state.recipe_Type}
-					  onChange={this.update}
-					/>
+				     <div 
+				       id="scope"
+				       style={styles.block}
+				       value={this.state.scope}
+			           onChange={this.scopeChange}>
+					     <Checkbox label="Make Public" style={styles.checkbox}/>
+					     <Checkbox label="Make Private" style={styles.checkbox}/>
+					 </div>
+					<SelectField
+					  id="recipe_Type"
+			          floatingLabelText="Recipe Type"
+			          value={this.state.recipe_Type}
+			          onChange={this.recipeChange}
+			          style={styles.customWidth}>
+				          <MenuItem value="breakfast" primaryText="Breakfast" />
+				          <MenuItem value="lunch" primaryText="Lunch" />
+				          <MenuItem value="dinner" primaryText="Dinner" />
+				          <MenuItem value="dessert" primaryText="Dessert" />
+			        </SelectField>
 				    <TextField   
 				      id="prep_Time"   
 				      hintText="Prep Time"
@@ -135,6 +174,15 @@ const AddRecipe = React.createClass({
                       value={this.state.cook_Temp}
                       onChange={this.update}
                     />
+                    <SelectField
+                      id="degree_Units"
+			          floatingLabelText="°F"
+			          value={this.state.degree_Units}
+			          onChange={this.degreeChange}
+			          style={styles.customWidth}>
+				          <MenuItem value="Fahrenheit" primaryText="Fahrenheit" />
+				          <MenuItem value="Celcius" primaryText="Celcius" />		         
+			        </SelectField>
                     <TextField   
                       id="portion_Amount"
                       hintText="Amount"
@@ -150,44 +198,17 @@ const AddRecipe = React.createClass({
                       value={this.state.portion_Type}
                       onChange={this.update}
                     />
-                    <TextField
-                      id="step_Amount"
-                      hintText="Enter quantity of ingredient here."
-                      floatingLabelText="1,2,3 etc..."
-                      fullWidth={true}
-                      value={this.state.step_Amount}
-                      onChange={this.update}
-                    />
-                     <TextField
-                      id="units"
-                      hintText="Enter unit of measure here."
-                      floatingLabelText="Cups, TBS, tsp, etc..."
-                      fullWidth={true}
-                      value={this.state.units}
-                      onChange={this.update}
-                    />
-                    <TextField
-                      id="ingredient"
-                      hintText="Ingredient"
-                      floatingLabelText="Enter ingredient here."
-                      fullWidth={true}
-                      value={this.state.ingredient}
-                      onChange={this.update}
-                    />
+                    <h3> Personal Notes </h3>
                     <TextField
                       id="personal_Notes"
                       hintText="Personal Notes"
                       floatingLabelText="Tell us about your recipe!"
                       fullWidth={true}
                       value={this.state.personal_Notes}
-                      onChange={this.update}
-                    />
-                  
-
+                      onChange={this.update}/>
+                    <RaisedButton type="submit" label="Add Directions" primary={true} style={style.button}/>
 				</form>
-				<div>
-				    <RaisedButton label="Submit Recipe" primary={true} style={style.button} onClick={this.updateRecipes}/>
-				 </div>
+				
 			</div>	
 		)
 	}
@@ -195,49 +216,7 @@ const AddRecipe = React.createClass({
 export default AddRecipe
 
 
-// value: 1 "this is a value for getInitialState for material UI select fields"
+  // {this.props.steps.map((step, i) =>(
+ //	<Steps stepId={i + 1} recipeId={1}/>  
+// ))}	 
 
-// handleChange: function(event, index, value) {
-//  	this.setState({value})
-// }, "this is a handle property used for select fields"
-
-
-
-// <div className="formfields">
-// 	<input type="url" id="image" className="image" />
-// 	<div className="Names">
-// 		<input type="text" id="Recipe Name"className="addFields" placeholder="Recipe Name" />
-// 		<input type="text" id="creator"className="addFields"  placeholder="Chef's Name"/>
-		
-//    	</div>
-//    	<div>
-//    		<input type="checkbox" id="public"/><label htmlFor="public">Make it Public</label>
-// 		<input type="checkbox" id="private"/><label htmlFor="private">Make it Private</label>
-   		
-//    	</div>
-//    	<div className="howToCook">
-// 	    <input type="text" id="prepTime" className="addFields" placeholder="Prep Time"/>
-// 	    <input type="cookTime" id="cookTime" className="addFields" placeholder="Cook Time"/>
-// 	    <input type="cookTemp" id="cookTemp" className="addFields" placeholder="Cook Temp" />
-// 		<SelectField value={this.state.value} onChange={this.handleChange}>
-// 	        <MenuItem value={1} label="5 am - 12 pm" primaryText="Morning" />
-// 	        <MenuItem value={2} label="12 pm - 5 pm" primaryText="Afternoon" />
-// 	        <MenuItem value={3} label="5 pm - 9 pm" primaryText="Evening" />
-// 	        <MenuItem value={4} label="9 pm - 5 am" primaryText="Night" />
-// 	    </SelectField>
-// 	</div>
-// </div>   
-// <div>
-// 	<h3>Step 1</h3>
-// 		<div className="howToCook">
-// 		    <input type="text" id="prepTime" className="addFields" placeholder="Amount" />
-// 		    <input type="cookTime" id="cookTime" className="addFields" placeholder="Unit" />
-// 		    <input type="cookTemp" id="cookTemp" className="addFields" placeholder="Ingredient" />
-// 		</div>
-// 		<input type="textArea" id="personalNotes" className="textArea" placeholder="Directions for this step" />
-// 		<button onClick={this.navToAddRecipe}> Add Another Step </button>
-// </div>
-// <div>
-// 	<h3>Pesonal Notes</h3>
-// 	<input type="textArea" id="personalNotes" className="textArea" />
-// </div>

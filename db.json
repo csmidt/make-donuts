@@ -1,7 +1,8 @@
 {
   "recipes": [
     {
-      "id": 0,
+      "id": 1,
+      "recipeId": 1,
       "image": "https://media-cdn.tripadvisor.com/media/photo-s/02/e1/9b/54/usa-cowboy-tacos.jpg",
       "recipe_Name": "usa-cowboy-tacos",
       "by": "Blanca Cummings",
@@ -14,49 +15,7 @@
       "degree_Units": "Celcius",
       "portion_Amount": 4,
       "portion_Type": "Servings",
-      "instructions": [
-        {
-          "id": 1,
-          "AUIs": [
-            {
-              "step_Amount": 2,
-              "units": "cups",
-              "ingredient": "Beef"
-            }
-          ],
-          "directions": "Reiciendis quis aut ad nemo. Est excepturi corrupti autem. Mollitia qui laudantium saepe eos. Iste non laboriosam atque quo eum sit magnam eum iusto."
-        }
-      ],
       "personal_Notes": "Voluptatem est eius quibusdam rerum. Commodi qui sed fugit hic consectetur eum nam odit. Vero aperiam quisquam eos velit ipsam nihil. Voluptatem sunt quia cum maxime tenetur quo quasi non magni. Veritatis atque numquam sed sint eveniet ipsam perferendis."
-    },
-    {
-      "id": 1,
-      "image": "https://i.ytimg.com/vi/1P6fXQSdk1w/maxresdefault.jpg",
-      "recipe_Name": "Chicken and Dumplings",
-      "by": "Baron Krajcik",
-      "scope": "Public",
-      "recipe_Type": "Dinner",
-      "recipeCategoryId": "Public",
-      "prep_Time": 60,
-      "cook_Time": 30,
-      "cook_Temp": 100,
-      "degree_Units": "Celcius",
-      "portion_Amount": 8,
-      "portion_Type": "Loafs",
-      "instructions": [
-        {
-          "id": 1,
-          "AUIs": [
-            {
-              "step_Amount": 2,
-              "units": "cups",
-              "ingredient": "flour"
-            }
-          ],
-          "directions": "Quae omnis blanditiis et rerum placeat atque. Sequi repellendus ut ad. Soluta at molestiae quibusdam alias maiores quasi. Adipisci et fugit totam. Et quo molestiae aut id quidem molestias."
-        }
-      ],
-      "personal_Notes": "Sed fugiat enim temporibus quam et. Laudantium quibusdam natus quibusdam possimus expedita. Nesciunt aut ea aut."
     },
     {
       "id": 2,
@@ -72,241 +31,202 @@
       "degree_Units": "Celcius",
       "portion_Amount": 95282,
       "portion_Type": "Loafs",
-      "instructions": [
-        {
-          "id": 1,
-          "AUIs": [
-            {
-              "step_Amount": 2,
-              "units": "cups",
-              "ingredient": "flour"
-            }
-          ],
-          "directions": "Adipisci quaerat ea fugiat maxime. Inventore et eligendi temporibus enim nihil maiores et id. Commodi dolorum ut provident rerum quis ullam aut. Iste ut sunt. Quo praesentium adipisci accusamus."
-        }
-      ],
       "personal_Notes": "Ut reprehenderit est placeat iusto. Temporibus officiis provident veritatis et enim voluptatem nihil sunt. Quia impedit molestias hic et voluptatibus a omnis rem. Deleniti et voluptas reiciendis totam et et et perferendis. Sed nobis velit iusto nemo."
     },
     {
-      "id": 3,
+      "image": "http://paleoleap.com/pictures/j-paleo/korean-short-ribs/korean-short-ribs-main.jpg",
+      "recipe_Name": "Korean Short Ribs",
+      "by": "Carrie",
+      "scope": {
+        "isTrusted": false
+      },
+      "recipe_Type": "dinner",
+      "degree_Units": "",
+      "prep_Time": "20 min",
+      "cook_Time": "2 hours",
+      "cook_Temp": 250,
+      "portion_Amount": 4,
+      "portion_Type": "servings",
+      "personal_Notes": "Eat!",
+      "id": 7
+    },
+    {
+      "image": "https://i.ytimg.com/vi/1P6fXQSdk1w/maxresdefault.jpg",
+      "recipe_Name": "Chicken and Dumplings",
+      "by": "Carrie",
+      "scope": "",
+      "recipe_Type": "dinner",
+      "degree_Units": "",
+      "prep_Time": "30 min",
+      "cook_Time": "30 min",
+      "cook_Temp": "mediumd",
+      "portion_Amount": 8,
+      "portion_Type": "Servings",
+      "personal_Notes": "Delicious!",
+      "id": 8
+    },
+    {
       "image": "http://www.fmbpune.com/wp-content/uploads/2015/07/grilled-teriyaki-fish-en-f2afbef5-2cb6-4e83-941b-94f745b605671.jpg",
       "recipe_Name": "Grilled Salmon",
-      "by": "Ben Barrows",
-      "scope": "Public",
-      "recipe_Type": "Breakfast",
-      "recipeCategoryId": "Favorite",
-      "prep_Time": 67529,
-      "cook_Time": 1954,
-      "cook_Temp": 11007,
-      "degree_Units": "Celcius",
-      "portion_Amount": 27639,
-      "portion_Type": "Loafs",
-      "instructions": [
-        {
-          "id": 1,
-          "AUIs": [
-            {
-              "step_Amount": 2,
-              "units": "cups",
-              "ingredient": "flour"
-            }
-          ],
-          "directions": "Distinctio eum sunt aut numquam et excepturi nemo enim. Perferendis sunt dicta tenetur. Molestiae praesentium temporibus corrupti quisquam ut. Eius similique praesentium eaque veniam debitis dicta ut reprehenderit. Aperiam quo a ut unde ut sint."
-        }
-      ],
-      "personal_Notes": "Qui laborum minus accusamus et. Ut reprehenderit rerum cupiditate minima et fugit. Velit sapiente sit ratione maxime aut. Possimus similique sint ipsum ad consequatur nam laboriosam. Vero modi vel deleniti. Aut provident quibusdam expedita ducimus et non dolores ut aspernatur."
+      "by": "Carrie",
+      "scope": "",
+      "recipe_Type": "lunch",
+      "degree_Units": "",
+      "prep_Time": "20 min",
+      "cook_Time": "20 min",
+      "cook_Temp": "medium",
+      "portion_Amount": 1,
+      "portion_Type": "serving",
+      "personal_Notes": "Healthy Dinner",
+      "id": 9
     },
     {
-      "id": 4,
       "image": "https://images.heb.com/is/image/HEBGrocery/article/Grill-Times-Test-Image_01.jpg",
       "recipe_Name": "Grilled Steak",
-      "by": "Ross Denesik",
-      "scope": "Public",
-      "recipe_Type": "Breakfast",
-      "recipeCategoryId": "Public",
-      "prep_Time": 89102,
-      "cook_Time": 92364,
-      "cook_Temp": 68714,
-      "degree_Units": "Celcius",
-      "portion_Amount": 35848,
-      "portion_Type": "Loafs",
-      "instructions": [
-        {
-          "id": 1,
-          "AUIs": [
-            {
-              "step_Amount": 2,
-              "units": "cups",
-              "ingredient": "flour"
-            }
-          ],
-          "directions": "Qui tempore qui enim quas. A distinctio aspernatur cupiditate ducimus atque est pariatur. Et sed vitae commodi est. Facere dolor nihil in et eius id aspernatur voluptas."
-        }
-      ],
-      "personal_Notes": "Optio expedita eos libero est sed. Provident magni qui. Totam recusandae tempora praesentium tenetur illum velit similique velit soluta. Reiciendis repudiandae quae nihil. Excepturi harum dolores et inventore. Quis quia debitis rerum placeat."
-    },
-    {
-      "id": 5,
-      "image": "https://reckittbenckiser.calcmenuweb.com/picNormal/lg_11383.jpg",
-      "recipe_Name": "Buffalo Chicken Wrap",
-      "by": "Hipolito Feest",
-      "scope": "Public",
-      "recipe_Type": "Breakfast",
-      "recipeCategoryId": "My Recipes",
-      "prep_Time": 50697,
-      "cook_Time": 52559,
-      "cook_Temp": 86054,
-      "degree_Units": "Celcius",
-      "portion_Amount": 64942,
-      "portion_Type": "Loafs",
-      "instructions": [
-        {
-          "id": 1,
-          "AUIs": [
-            {
-              "step_Amount": 2,
-              "units": "cups",
-              "ingredient": "flour"
-            }
-          ],
-          "directions": "Ullam a omnis optio. Rerum minus aliquam. Qui cupiditate facere voluptas. Qui rem molestiae cupiditate culpa magnam voluptas tempora cumque aut. Sint dolorem similique quod reiciendis eum corrupti."
-        }
-      ],
-      "personal_Notes": "Voluptas ex eveniet illo ipsa. Sed reiciendis molestiae eos error quo consequatur molestiae doloremque. Doloremque expedita voluptas. Et non qui dolorum autem rerum magni provident architecto blanditiis."
-    },
-    {
-      "id": 6,
-      "image": "http://paleoleap.com/pictures/j-paleo/korean-short-ribs/korean-short-ribs-main.jpg",
-      "recipe_Name": "Braised Short Ribs",
-      "by": "Dr. Simone Nader",
-      "scope": "Public",
-      "recipe_Type": "Breakfast",
-      "recipeCategoryId": "My Pantry",
-      "prep_Time": 69613,
-      "cook_Time": 48395,
-      "cook_Temp": 38294,
-      "degree_Units": "Celcius",
-      "portion_Amount": 43730,
-      "portion_Type": "Loafs",
-      "instructions": [
-        {
-          "id": 1,
-          "AUIs": [
-            {
-              "step_Amount": 2,
-              "units": "cups",
-              "ingredient": "flour"
-            }
-          ],
-          "directions": "Omnis temporibus reprehenderit ipsam recusandae omnis. Praesentium maxime voluptas fuga perferendis. Velit facilis delectus praesentium aut porro et atque. Voluptates eligendi officiis asperiores fugiat. Perferendis consequatur voluptas. Est animi voluptatum qui dicta doloribus impedit quos."
-        }
-      ],
-      "personal_Notes": "Et odit omnis officia rerum. Ratione in consequatur. Et pariatur et ut assumenda porro in asperiores qui."
-    },
-    {
-      "id": 7,
-      "image": "https://cdn.instructables.com/FTS/X3CV/G1XBRSNK/FTSX3CVG1XBRSNK.RECT2100.jpg",
-      "recipe_Name": "Bruschetta",
-      "by": "Carlee Turner III",
-      "scope": "Public",
-      "recipe_Type": "Breakfast",
-      "recipeCategoryId": "Popular",
-      "prep_Time": 68227,
-      "cook_Time": 26461,
-      "cook_Temp": 90074,
-      "degree_Units": "Celcius",
-      "portion_Amount": 32318,
-      "portion_Type": "Loafs",
-      "instructions": [
-        {
-          "id": 1,
-          "AUIs": [
-            {
-              "step_Amount": 2,
-              "units": "cups",
-              "ingredient": "flour"
-            }
-          ],
-          "directions": "Et reprehenderit eos et quia consequatur et illo. Qui debitis quia. Minus quia molestiae perspiciatis illo nobis consequatur quis error."
-        }
-      ],
-      "personal_Notes": "Harum non eum voluptates suscipit ullam id eum. Deleniti voluptates excepturi est vel omnis animi. Ea voluptas aut hic placeat. Ea sed qui aperiam eum consequatur culpa magnam reprehenderit id."
-    },
-    {
-      "id": 8,
-      "image": "https://images-gmi-pmc.edge-generalmills.com/eb4781cc-f3a9-4344-ae02-c0c45769b1f9.jpg",
-      "recipe_Name": "Bacon Chedar Quiche",
-      "by": "Audrey McGlynn",
-      "scope": "Public",
-      "recipe_Type": "Breakfast",
-      "recipeCategoryId": "Favorite",
-      "prep_Time": 60317,
-      "cook_Time": 85361,
-      "cook_Temp": 83840,
-      "degree_Units": "Celcius",
-      "portion_Amount": 81913,
-      "portion_Type": "Loafs",
-      "instructions": [
-        {
-          "id": 1,
-          "AUIs": [
-            {
-              "step_Amount": 2,
-              "units": "cups",
-              "ingredient": "flour"
-            }
-          ],
-          "directions": "Aut culpa cumque. Nihil voluptatum voluptas aliquid voluptas harum earum ut voluptate. Autem impedit rerum unde. Veniam sint voluptatum illum."
-        }
-      ],
-      "personal_Notes": "Inventore voluptatem natus maiores fuga reiciendis. Dolores quia accusamus ea nihil. Eum perferendis ratione dolores."
-    },
-    {
-      "id": 9,
-      "image": "http://deliciouscrepesbistro.com/wp-content/uploads/2013/02/picture-3095.jpg",
-      "recipe_Name": "Greek Salad",
-      "by": "Joanie Ryan",
-      "scope": "Public",
-      "recipe_Type": "Breakfast",
-      "recipeCategoryId": "My Recipes",
-      "prep_Time": 7499,
-      "cook_Time": 75223,
-      "cook_Temp": 91142,
-      "degree_Units": "Celcius",
-      "portion_Amount": 27160,
-      "portion_Type": "Loafs",
-      "instructions": [
-        {
-          "id": 1,
-          "AUIs": [
-            {
-              "step_Amount": 2,
-              "units": "cups",
-              "ingredient": "flour"
-            }
-          ],
-          "directions": "Quaerat rerum ullam qui sunt magni. Delectus dolor vel sint in vero. Veniam enim distinctio."
-        }
-      ],
-      "personal_Notes": "Voluptatem fugiat reiciendis aut. Quas et delectus necessitatibus ut repudiandae maiores. Distinctio rerum est ut molestiae fugit amet. Id est repellat similique exercitationem illum cum accusamus et."
-    },
-    
-    {
-      "image": "http://www.unos.com/images/menus/deepdish/cheese.jpg",
-      "recipe_Name": "pizza",
-      "by": "carrie",
-      "recipe_Type": "dinner",
-      "recipeCategoryId": "Favorite",
+      "by": "Carrie",
+      "scope": "",
+      "recipe_Type": "",
+      "degree_Units": "",
       "prep_Time": "20 min",
+      "cook_Time": "20 min",
+      "cook_Temp": "medium",
+      "portion_Amount": "1 ",
+      "portion_Type": "serving",
+      "personal_Notes": "yummy yummy",
+      "id": 10
+    },
+    {
+      "image": "http://farm6.static.flickr.com/5014/5521515498_ffaeaee0e2_z.jpg",
+      "recipe_Name": "Coconut Macaroons",
+      "by": "Carrie",
+      "scope": "",
+      "recipe_Type": "dessert",
+      "degree_Units": "",
+      "prep_Time": "20 min",
+      "cook_Time": "25 min",
+      "cook_Temp": 350,
+      "portion_Amount": 3,
+      "portion_Type": "dozen",
+      "personal_Notes": "Eat with coffee",
+      "id": 11
+    },
+    {
+      "image": "https://images-gmi-pmc.edge-generalmills.com/eb4781cc-f3a9-4344-ae02-c0c45769b1f9.jpg",
+      "recipe_Name": "Bacon Cheddar Quiche",
+      "by": "Carrie",
+      "scope": "",
+      "recipe_Type": "breakfast",
+      "degree_Units": "",
+      "prep_Time": "30 min",
       "cook_Time": "60 min",
       "cook_Temp": 350,
-      "portion_Amount": 1,
-      "portion_Type": "pizza",
-      "step_Amount": 1,
-      "units": "cup",
-      "ingredient": "mozzerella",
-      "personal_Notes": "its delicious!",
-      "id": 32
+      "portion_Amount": 8,
+      "portion_Type": "Servings",
+      "personal_Notes": "Pair with fruit.",
+      "id": 12
+    },
+    {
+      "image": "",
+      "recipe_Name": "",
+      "by": "",
+      "scope": "",
+      "recipe_Type": "",
+      "degree_Units": "",
+      "prep_Time": "",
+      "cook_Time": "",
+      "cook_Temp": "",
+      "portion_Amount": "",
+      "portion_Type": "",
+      "personal_Notes": "",
+      "id": 13
+    }
+  ],
+  "steps": [
+    {
+      "id": 1,
+      "recipeId": 1,
+      "directions": "Reiciendis quis aut ad nemo. Est excepturi corrupti autem. Mollitia qui laudantium saepe eos. Iste non laboriosam atque quo eum sit magnam eum iusto."
+    },
+    {
+      "id": 2,
+      "recipeId": 2,
+      "directions": "Adipisci quaerat ea fugiat maxime. Inventore et eligendi temporibus enim nihil maiores et id. Commodi dolorum ut provident rerum quis ullam aut. Iste ut sunt. Quo praesentium adipisci accusamus."
+    },
+    {
+      "recipeId": 10,
+      "directions": "grill",
+      "id": 3
+    },
+    {
+      "recipeId": 10,
+      "directions": "grill",
+      "id": 4
+    },
+    {
+      "recipeId": 11,
+      "directions": "cook me",
+      "id": 5
+    },
+    {
+      "recipeId": 11,
+      "directions": "test test",
+      "id": 6
+    },
+    {
+      "recipeId": 11,
+      "directions": "mix coconut and things together",
+      "id": 7
+    },
+    {
+      "recipeId": 11,
+      "directions": "bake for 20 min. ",
+      "id": 8
+    },
+    {
+      "recipeId": 11,
+      "directions": "cook me",
+      "id": 9
+    },
+    {
+      "recipeId": 11,
+      "directions": "cook me",
+      "id": 10
+    },
+    {
+      "recipeId": 12,
+      "directions": "preheat oven",
+      "id": 11
+    },
+    {
+      "recipeId": 12,
+      "directions": "mix all ingredients",
+      "id": 12
+    },
+    {
+      "recipeId": 12,
+      "directions": "bake",
+      "id": 13
+    },
+    {
+      "recipeId": 13,
+      "directions": "",
+      "id": 14
+    }
+  ],
+  "auis": [
+    {
+      "id": 1,
+      "stepId": 1,
+      "step_Amount": 2,
+      "units": "cups",
+      "ingredient": "Beef"
+    },
+    {
+      "id": 2,
+      "stepId": 1,
+      "step_Amount": 2,
+      "units": "cups",
+      "ingredient": "flour"
     }
   ]
 }

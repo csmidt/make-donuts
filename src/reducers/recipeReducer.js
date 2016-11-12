@@ -27,15 +27,19 @@ export default function(state=DefaultState, action) {
 		case'GET_MY_PANTRY':
 			return {...state, my_Pantry:action.my_Pantry}
 
-	
 		case 'ADD_RECIPE':
 			return {...state, recipe: action.recipe}
 
+		case 'ADD_STEP':
+			return{...state, step: action.step}
 
-
-
-
-
+		case 'GET_STEPS':
+			return{...state, steps: action.steps}
+		
+		case 'GET_AUIS':
+			return{...state, auis: action.auis}
+		case 'ADD_AUIS':
+			return{...state, aui: action.aui}
 		default:
 			return state
 

@@ -61,7 +61,6 @@ const styles = {
   }
 };
 
-
 const GridListExampleSingleLine = React.createClass({
   render: function() {
     return (

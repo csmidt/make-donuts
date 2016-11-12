@@ -6,7 +6,7 @@ import { hashHistory } from 'react-router'
 axios.defaults.baseURL = 'http://localhost:8001/'
 
 export function getRecipe(id) {
-	return axios.get(`recipes/${id}`).then(resp => {
+	return axios.get(`recipes/${id}?_embed=steps`).then(resp => {
 		console.log('getRecipe()', resp.data)
 		store.dispatch({
 			type: 'GET_RECIPE',
@@ -72,7 +72,52 @@ export function addRecipe(obj) {
 		store.dispatch({
 			type: 'ADD_RECIPE',
 			recipe: resp.data
+		})
+		console.log('resp.data', resp.data)
+		hashHistory.push("/steps/" + resp.data.id)
+	})
+}
 
+export function getSteps(recipeId) {
+	return axios.get('steps?recipeId=' + recipeId).then(resp => {
+		store.dispatch({
+			type: 'GET_STEPS',
+			steps: resp.data
 		})
 	})
 }
+
+export function addStep(obj) {
+	return axios.post("steps", obj).then(resp => {
+		getSteps(obj.recipeId).then(resp => {
+			store.dispatch ({
+				type:'ADD_STEP',
+				steps: resp.data
+			})
+		})
+	})
+}
+
+export function addAuis(obj) {
+	return axios.post("auis", obj).then(resp => {
+		getAuis(obj.stepsId).then(resp => {
+			store.dispatch ({
+				type:'ADD_AUIS',
+				auis: resp.data
+			})
+		})
+	})
+}
+
+export function getAuis(stepId) {
+	return axios.get('auis?stepId=' + stepId).then(resp => {
+		store.dispatch({
+			type:'GET_AUIS',
+			auis: resp.data
+		})
+	})
+}
+
+
+
+
