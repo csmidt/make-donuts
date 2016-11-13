@@ -1,0 +1,114 @@
+// import React from 'react'
+// import {Link, HashHistory } from 'react-router'
+// import { addAuis, getAuis} from 'api/recipesapi'
+// import * as actions from 'actions'
+// import store from 'store'
+// import MenuItem from 'material-ui/MenuItem';
+// import TextField from 'material-ui/TextField'
+// import RaisedButton from 'material-ui/RaisedButton'
+
+// const style = {
+//   margin: 12,
+//   button: {
+//   	backgroundColor: "#00FF00"	
+//   }
+// }
+// const styles = {
+//   customWidth: {
+//     width: 150,
+//   }
+// } 
+// const IngredientContainer = React.createClass({
+// 	getInitialState: function() {
+// 		return {
+// 			auis: []
+// 		}
+// 	},
+// 	componentWillMount: function () {
+// 		this.unsubscribe = store.subscribe(() => {
+// 			const appState = store.getState()
+// 			this.setState({
+// 				auis: appState.auis
+// 			})
+// 		})
+// 	},
+// 	componentWillUnmount: function () {
+// 		this.unsubscribe()
+// 	},
+// 	render: function () {
+// 		return (
+// 			<Ingredient stepId={this.props.params.stepId} auis={this.state.steps} />
+// 		)
+// 	}
+// })
+// const Ingredient = React.createClass ({
+// 	getInitialState: function() {
+// 		return {
+// 			step_Amount: "",
+// 			untis: "",
+// 			ingredient:""
+// 		}
+// 	},
+// 	update: function(e) {
+// 		var obj = {}
+// 		var id = e.target.id
+// 		obj[id] = e.target.value
+// 		this.setState(obj)
+// 	},
+// 	updateSteps: function(e) {
+// 		e.preventDefault()
+// 		var obj = {
+// 			stepId: this.props.stepId,
+// 			ingredient: this.state.ingredient,
+// 			units: this.state.units,
+// 			step_Amount: this.state.step_Amount
+// 		}
+// 		console.log(obj)
+// 		addAuis(obj)
+// 	},
+// 	render: function () {
+// 		return (
+// 			<div>
+// 				{this.props.auis.map((aui, i) => (
+// 					<div className="step">
+// 						<h1>Auis{i + 1}</h1>
+// 						<p>{auis.step_Amount} {auis.units} {auis.ingredient}</p>
+// 					</div>
+// 				))}	
+// 					<TextField
+// 			          id="directions"
+// 			          hintText="Enter directions here."
+// 			          floatingLabelText="Directions"
+// 			          fullWidth={true}          
+// 			          onChange={this.update}
+// 			          value={this.state.step_Amount}
+// 			        />
+// 			        <TextField
+// 			          id="directions"
+// 			          hintText="Enter directions here."
+// 			          floatingLabelText="Directions"
+// 			          fullWidth={true}          
+// 			          onChange={this.update}
+// 			          value={this.state.units}
+// 			        />
+// 			        <TextField
+// 			          id="directions"
+// 			          hintText="Enter directions here."
+// 			          floatingLabelText="Directions"
+// 			          fullWidth={true}          
+// 			          onChange={this.update}
+// 			          value={this.state.ingredient}
+// 			        />
+
+// 			   		<button type="button" onClick={this.updateSteps}>Add Step</button>	
+// 			</div>		
+// 		)		
+// 	}
+// })
+	
+// export default StepsContainer
+
+
+
+
+
