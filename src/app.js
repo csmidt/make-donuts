@@ -9,12 +9,14 @@ import GridListExample from 'ui/gridListExample'
 // http://stackoverflow.com/a/34015469/988941
 injectTapEventPlugin();
 
-
 // Layouts
 import App from 'layouts/app';
 import Home from 'ui/home'
 import AddRecipe from 'ui/addRecipe'
 import RecipeProfile from 'ui/recipeProfile'
+import Steps from 'ui/Steps'
+import Ingredient from 'ui/Ingredient'
+
 
 ReactDOM.render((
 	<MuiThemeProvider>
@@ -23,10 +25,12 @@ ReactDOM.render((
 				 <Route component={ Home } path="/" />
 				 <Route component={ GridListExample } path="/gridListExample"/>
 				 <Route component={ AddRecipe } path="/addRecipe/:id" />
+				 <Route component={ Steps } path="/steps/:recipeId" />
+				 <Route component={ Ingredient } path="/ingredient/:stepid" />
 				 <Route component={ RecipeProfile } path="/recipeProfile/:id"/>
 			</Route>
 		</Router>
 	</MuiThemeProvider>
-
+ 
 ), document.getElementById('app'));
 
