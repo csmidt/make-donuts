@@ -61,13 +61,19 @@ const StepsView = React.createClass ({
 		}
 		console.log(obj)
 		addStep(obj)
+		
 	},
+	
+
 	render: function () {
 		return (
 			<div>
+				<div>
+					<button type="button" onClick={this.navToAddIngredient}>Click here to add ingredients</button>	
+				</div>
 				{this.props.steps.map((step, i) => (
 					<div className="step">
-						<h1>Step {i + 1}</h1>
+						<h4>Step {i + 1}</h4>
 						<p>{step.directions}</p>
 					</div>
 				))}	
