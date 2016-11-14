@@ -41,6 +41,7 @@ const StepsContainer = React.createClass({
 		)
 	}
 })
+
 const StepsView = React.createClass ({
 	getInitialState: function() {
 		return {

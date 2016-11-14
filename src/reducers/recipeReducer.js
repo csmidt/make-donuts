@@ -6,6 +6,7 @@ const DefaultState = {
 	favorite_Recipes: [],
 	public_Recipes: [],
 	popular_Recipes: [],
+	my_Pantry: []
 }
 
 export default function(state=DefaultState, action) {
