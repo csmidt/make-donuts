@@ -37,9 +37,9 @@ export default function(state=DefaultState, action) {
 			return{...state, steps: action.steps}
 		
 		case 'GET_AUIS':
-			return{...state, auis: action.auis}
+			return{...state, auis: action.aui}
 		case 'ADD_AUIS':
-			return{...state, aui: action.aui}
+			return{...state, auis: action.auis}
 		default:
 			return state
 

@@ -1,8 +1,9 @@
 import React from 'react'
-import {Link, HashHistory } from 'react-router'
+import {Link, hashHistory } from 'react-router'
 import { addStep, getSteps} from 'api/recipesapi'
 import * as actions from 'actions'
 import store from 'store'
+import Ingredient from 'ui/Ingredient'
 import MenuItem from 'material-ui/MenuItem';
 import TextField from 'material-ui/TextField'
 import RaisedButton from 'material-ui/RaisedButton'
@@ -59,34 +60,34 @@ const StepsView = React.createClass ({
 			recipeId: this.props.recipeId,
 			directions: this.state.directions
 		}
-		console.log(obj)
+		console.log('updateSteps()', obj)
 		addStep(obj)
-		
 	},
 	
 
 	render: function () {
 		return (
 			<div>
-				<div>
-					<button type="button" onClick={this.navToAddIngredient}>Click here to add ingredients</button>	
-				</div>
-				{this.props.steps.map((step, i) => (
-					<div className="step">
-						<h4>Step {i + 1}</h4>
-						<p>{step.directions}</p>
-					</div>
-				))}	
-					<TextField
-			          id="directions"
-			          hintText="Enter directions here."
-			          floatingLabelText="Directions"
-			          fullWidth={true}          
-			          onChange={this.update}
-			          value={this.state.directions}
-			        />
-			   		<button type="button" onClick={this.updateSteps}>Add Step</button>	
-			</div>		
+				<form onSubmit={this.updateSteps}>
+					{this.props.steps.map((step, i) => (
+						<div key={step.id}className="step">
+							<h4>Step {i + 1}</h4>
+							<p>{step.directions}</p>
+						</div>
+					))}	
+						<TextField
+				          id="directions"
+				          hintText="Enter directions here."
+				          floatingLabelText="Directions"
+				          fullWidth={true}          
+				          onChange={this.update}
+				          value={this.state.directions}
+				        />
+				   		
+				   		<RaisedButton type="submit" label="Add Step" primary={true} style={style.button}/>	
+				</form>	
+				
+			</div>	
 		)		
 	}
 })

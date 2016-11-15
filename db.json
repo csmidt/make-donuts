@@ -124,111 +124,6 @@
       "portion_Type": "Servings",
       "personal_Notes": "Pair with fruit.",
       "id": 12
-    },
-    {
-      "image": "",
-      "recipe_Name": "",
-      "by": "",
-      "scope": "",
-      "recipe_Type": "",
-      "degree_Units": "",
-      "prep_Time": "",
-      "cook_Time": "",
-      "cook_Temp": "",
-      "portion_Amount": "",
-      "portion_Type": "",
-      "personal_Notes": "",
-      "id": 13
-    },
-    {
-      "image": "",
-      "recipe_Name": "",
-      "by": "",
-      "scope": "",
-      "recipe_Type": "",
-      "degree_Units": "",
-      "prep_Time": "",
-      "cook_Time": "",
-      "cook_Temp": "",
-      "portion_Amount": "",
-      "portion_Type": "",
-      "personal_Notes": "",
-      "id": 14
-    },
-    {
-      "image": "",
-      "recipe_Name": "",
-      "by": "",
-      "scope": "",
-      "recipe_Type": "",
-      "degree_Units": "",
-      "prep_Time": "",
-      "cook_Time": "",
-      "cook_Temp": "",
-      "portion_Amount": "",
-      "portion_Type": "",
-      "personal_Notes": "",
-      "id": 15
-    },
-    {
-      "image": "",
-      "recipe_Name": "",
-      "by": "",
-      "scope": "",
-      "recipe_Type": "",
-      "degree_Units": "",
-      "prep_Time": "",
-      "cook_Time": "",
-      "cook_Temp": "",
-      "portion_Amount": "",
-      "portion_Type": "",
-      "personal_Notes": "",
-      "id": 16
-    },
-    {
-      "image": "",
-      "recipe_Name": "",
-      "by": "",
-      "scope": "",
-      "recipe_Type": "",
-      "degree_Units": "",
-      "prep_Time": "",
-      "cook_Time": "",
-      "cook_Temp": "",
-      "portion_Amount": "",
-      "portion_Type": "",
-      "personal_Notes": "",
-      "id": 17
-    },
-    {
-      "image": "",
-      "recipe_Name": "",
-      "by": "",
-      "scope": "",
-      "recipe_Type": "",
-      "degree_Units": "",
-      "prep_Time": "",
-      "cook_Time": "",
-      "cook_Temp": "",
-      "portion_Amount": "",
-      "portion_Type": "",
-      "personal_Notes": "",
-      "id": 18
-    },
-    {
-      "image": "",
-      "recipe_Name": "",
-      "by": "",
-      "scope": "",
-      "recipe_Type": "",
-      "degree_Units": "",
-      "prep_Time": "",
-      "cook_Time": "",
-      "cook_Temp": "",
-      "portion_Amount": "",
-      "portion_Type": "",
-      "personal_Notes": "",
-      "id": 19
     }
   ],
   "steps": [
@@ -281,51 +176,6 @@
       "recipeId": 11,
       "directions": "cook me",
       "id": 10
-    },
-    {
-      "recipeId": 12,
-      "directions": "preheat oven",
-      "id": 11
-    },
-    {
-      "recipeId": 12,
-      "directions": "mix all ingredients",
-      "id": 12
-    },
-    {
-      "recipeId": 12,
-      "directions": "bake",
-      "id": 13
-    },
-    {
-      "recipeId": 13,
-      "directions": "",
-      "id": 14
-    },
-    {
-      "recipeId": 15,
-      "directions": "",
-      "id": 15
-    },
-    {
-      "recipeId": 15,
-      "directions": "",
-      "id": 16
-    },
-    {
-      "recipeId": 16,
-      "directions": "",
-      "id": 17
-    },
-    {
-      "recipeId": 17,
-      "directions": "",
-      "id": 18
-    },
-    {
-      "recipeId": 18,
-      "directions": "",
-      "id": 19
     }
   ],
   "auis": [
@@ -342,6 +192,20 @@
       "step_Amount": 2,
       "units": "cups",
       "ingredient": "flour"
+    }
+    {
+      "stepId": 42,
+      "ingredient": "ff",
+      "units": "af",
+      "step_Amount": "sdf",
+      "id": 37
+    },
+    {
+      "stepId": 42,
+      "ingredient": ";lkjsdf",
+      "units": ";alksdjf",
+      "step_Amount": ";asdlkfj",
+      "id": 38
     }
   ]
 }
