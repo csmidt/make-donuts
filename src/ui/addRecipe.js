@@ -81,7 +81,7 @@ const AddRecipe = React.createClass({
 		var id = e.target.id
 		var value = e.target.value
 		obj[id] = value
-		this.setState(obj);
+		this.setState(obj)
 	},
 
 	scopeChange: function(event, index, value) {

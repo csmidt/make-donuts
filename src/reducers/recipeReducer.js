@@ -45,13 +45,10 @@ export default function(state=DefaultState, action) {
 		case 'GET_STEPS':
 			return{...state, steps: action.steps}
 		
-		// case 'GET_AUIS':
-		// 	return{...state, auis: action.auis}
-		// from a merge with Carrie 11.12
-		
-		case 'ADD_AUIS': 
-			return{...state, aui: action.aui}
-			
+		case 'GET_AUIS':
+			return{...state, auis: action.aui}
+		case 'ADD_AUIS':
+			return{...state, auis: action.auis}
 		default:
 			return state
 

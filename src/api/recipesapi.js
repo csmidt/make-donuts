@@ -90,23 +90,28 @@ export function getSteps(recipeId) {
 
 export function addStep(obj) {
 	return axios.post("steps", obj).then(resp => {
-		getSteps(obj.recipeId).then(resp => {
-			store.dispatch ({
-				type:'ADD_STEP',
-				steps: resp.data
-			})
-		})
+		hashHistory.push("/ingredient/" + resp.data.id)
+
+		// getSteps(obj.recipeId).then(resp2 => {
+		// 	store.dispatch ({
+		// 		type:'ADD_STEP',
+		// 		steps: resp2.data
+		// 	})
+		// })
+
 	})
 }
 
 export function addAuis(obj) {
 	return axios.post("auis", obj).then(resp => {
-		getAuis(obj.stepsId).then(resp => {
-			store.dispatch ({
-				type:'ADD_AUIS',
-				auis: resp.data
-			})
-		})
+		hashHistory.push("/steps/" + resp.data.id)
+
+		// getAuis(obj.stepsId).then(resp2 => {
+		// 	store.dispatch ({
+		// 		type:'ADD_AUIS',
+		// 		aui: resp2.data
+		// 	})
+		// })
 	})
 }
 
