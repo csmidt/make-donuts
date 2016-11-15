@@ -52,12 +52,16 @@ const adjustRecipeContainer = React.createClass({
 		      fullWidth={true}
 		      onChange={this.update}
 		    	/>
-	    	<RaisedButton label="Submit changes"
-	    		onClick=
-	    		/>
-    	</div>
+	    	    	</div>
 		)
 	}
 })
 
 export default adjustRecipeContainer
+
+
+// <RaisedButton label="Submit changes"
+	    		// onClick=
+	    		// />
+
+
