@@ -8,7 +8,7 @@ axios.defaults.baseURL = 'http://localhost:8001/'
 export function getRecipe(id) {
 	return axios.get(`recipes/${id}`).then(resp => {
 	// return axios.get(`recipes/${id}?_embed=steps`).then(resp => {
-	// 	console.log('getRecipe()', resp.data)
+		console.log('getRecipe()', resp.data)
 		store.dispatch({
 			type: 'GET_RECIPE',
 			recipe: resp.data

@@ -21,7 +21,8 @@ const RecipeProfileContainer = React.createClass({
       portion_Type: "",
       AUIs: [],
       step: [],
-      personal_Notes: ""
+      personal_Notes: "",
+      recipe_Id: ""
 		}
 	},
 
@@ -46,10 +47,12 @@ const RecipeProfileContainer = React.createClass({
         portion_Type: appState.recipe.portion_Type,
         AUIs: appState.AUIs,
         step: appState.step,
-        personal_Notes: appState.recipe.personal_Notes
+        personal_Notes: appState.recipe.personal_Notes,
+        recipe_Id: this.props.params.id
 
       })
-    })    
+      console.log('component state', this.state)
+    })
 	},
 
   componentWillUnmount: function() {    
@@ -85,6 +88,7 @@ const RecipeProfileContainer = React.createClass({
           portion_Amount={this.state.portion_Amount}
           portion_Type={this.state.portion_Type}
           AUIs={this.state.AUIs}
+          recipe_Id={this.state.recipe_Id}
 
           />
 
@@ -214,6 +218,7 @@ const RecipeCard = React.createClass({
               backgroundColor="#504f4f"
               labelColor="#FFFFFF"
               icon={<FontIcon className="material-icons" color="#cccccc">create</FontIcon>}
+              href={"http://localhost:8000/#/adjustRecipe/" + this.props.recipe_Id }
               />
             </td>
           </tr>

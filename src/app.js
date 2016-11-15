@@ -18,7 +18,7 @@ import RecipeProfile from 'ui/recipeProfile'
 import Steps from 'ui/Steps'
 // import Ingredient from 'ui/Ingredient'
 import GridListExample from 'ui/gridListExample'
-
+import AdjustRecipe from 'ui/adjustRecipe'
 
 
 ReactDOM.render((
@@ -30,6 +30,7 @@ ReactDOM.render((
 				 <Route component={ AddRecipe } path="/addRecipe/:id" />
 				 <Route component={ Steps } path="/steps/:recipeId" />
 				 <Route component={ RecipeProfile } path="/recipeProfile/:id"/>
+				 <Route component={ AdjustRecipe } path="/adjustRecipe/:id"/>
 			</Route>
 		</Router>
 	</MuiThemeProvider>
