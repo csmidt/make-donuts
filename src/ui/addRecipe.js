@@ -144,7 +144,7 @@ const AddRecipe = React.createClass({
 				      value={this.state.by}
 				      onChange={this.update}
 				    />
-				     <div 
+				     <div className="scope"
 				       id="scope"
 				       style={styles.block}
 				       value={this.state.scope}

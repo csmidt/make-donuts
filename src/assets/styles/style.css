@@ -8,6 +8,7 @@ html {
 
 main {
 	display: flex;
+	align-items: stretch;
 }
 
 .header {
@@ -24,12 +25,18 @@ main {
 	list-style: none;
 	padding-top: 40px;
 	padding-left: 15px;
+    font-family: 'Overlock', cursive;    
 }
+.headerIcons:nth-child(2){
+	font-size: 30px;
+}
+
 .icons {
 	list-style: none;
 	display: flex;
 	flex-direction: row;
-	padding-right: 20px;	
+	padding-right: 20px;
+	font-family: 'Overlock', cursive;	
 }
 
 .icons > li {
@@ -43,7 +50,7 @@ main {
 
 .sidebar {
 	width: 200px;
-	height: 500px;
+	align-items: stretch;
 	background-color: #bfbfbf;	
 }
 
@@ -58,24 +65,29 @@ main {
 	border-bottom:1px solid #fff;
 	width: 85%;
 	word-wrap: wrap;
-	font-family: 'Cormorant Garamond', serif;
+	font-family: 'Overlock', cursive;
 }
 
 /*.recipeView {
 	list-style: none;
 */
 
- .root {
+.root {
     display: flex;
     flexWrap: wrap;
-    justifyContent: space-around;
-  }
+    justifyContent: space-around
+ }
 
-  .gridList {
+.gridList {
     display: flex;
     flexWrap: nowrap;
     overflowX: auto;
-  }
+ }
+.gridView {
+ 	margin-left: 30px;
+ 	margin-top: 20px;
+    font-family: 'Overlock', cursive;
+ }
 
 .formfields {
 	display: flex;
@@ -122,13 +134,20 @@ main {
 	margin-left: 20px;
 }
 
+h3 {
+	font-family: 'Overlock', cursive;
+}
+.scope {
+	font-family: 'Overlock', cursive, !important;
+}
+
 .recipeProfileHeaderTitle {
 	font-size: 25px !important;
 
 }
 
 .recipeProfileContainer {
-	width: 84.5%;
+	width: 75%;
 }
 
 .table {

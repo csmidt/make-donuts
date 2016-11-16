@@ -2,7 +2,8 @@ import React from 'react';
 import {GridList, GridTile} from 'material-ui/GridList';
 import IconButton from 'material-ui/IconButton';
 import StarBorder from 'material-ui/svg-icons/toggle/star-border';
-import { getRecipes, getFavoriteRecipes, getPublicRecipes, getPopularRecipes, getMyPantry } from 'api/recipesapi'
+import { getRecipes, getFavoriteRecipes, getPublicRecipes, 
+         getPopularRecipes, getMyPantry } from 'api/recipesapi'
 import store from 'store'
 
 const GridListExampleContainer = React.createClass({
@@ -57,7 +58,8 @@ const styles = {
     display: 'flex',
     flexWrap: 'nowrap',
     overflowX: 'auto',
-    width: '600px'
+    width: '1000px',
+    marginleft: '20px'
   }
 };
 
