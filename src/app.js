@@ -12,7 +12,6 @@ injectTapEventPlugin();
 import App from 'layouts/app';
 
 //Content
-import Home from 'ui/home'
 import AddRecipe from 'ui/addRecipe'
 import RecipeProfile from 'ui/recipeProfile'
 import Steps from 'ui/Steps'
@@ -26,8 +25,7 @@ ReactDOM.render((
 	<MuiThemeProvider>
 		<Router history={hashHistory}>
 			<Route component={ App }>
-				 <Route component={ Home } path="/" />
-				 <Route component={ GridListExample } path="/gridListExample"/>
+				 <Route component={ GridListExample } path="/"/>
 				 <Route component={ AddRecipe } path="/addRecipe" />
 				 <Route component={ Steps } path="/steps/:recipeId" />
 				 <Route component={ Ingredient} path="/ingredient/recipeId/:recipeId/stepId/:stepId" />

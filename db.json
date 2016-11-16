@@ -29,6 +29,23 @@
       "portion_Type": "fishies",
       "personal_Notes": "pleae be right",
       "id": 2
+    },
+    {
+      "image": "https://reckittbenckiser.calcmenuweb.com/picNormal/lg_11383.jpg",
+      "recipe_Name": "Buffalo Chicken Wrap",
+      "by": "Carrie",
+      "scope": {
+        "isTrusted": false
+      },
+      "recipe_Type": "dinner",
+      "degree_Units": "",
+      "prep_Time": 20,
+      "cook_Time": 20,
+      "cook_Temp": 0,
+      "portion_Amount": 1,
+      "portion_Type": "serving",
+      "personal_Notes": "eat",
+      "id": 3
     }
   ],
   "steps": [
@@ -81,6 +98,31 @@
       "recipeId": 2,
       "directions": "vacuum pack",
       "id": 10
+    },
+    {
+      "recipeId": 3,
+      "directions": "cook chicken",
+      "id": 11
+    },
+    {
+      "recipeId": 3,
+      "directions": "add sauce",
+      "id": 12
+    },
+    {
+      "recipeId": 3,
+      "directions": "wrap chicken",
+      "id": 13
+    },
+    {
+      "recipeId": 4,
+      "directions": "",
+      "id": 14
+    },
+    {
+      "recipeId": 4,
+      "directions": "",
+      "id": 15
     }
   ],
   "auis": [
@@ -163,6 +205,38 @@
       "step_Amount": "3 ",
       "recipeId": 2,
       "id": 10
+    },
+    {
+      "stepId": 11,
+      "ingredient": "chicken",
+      "units": "lb",
+      "step_Amount": 1,
+      "recipeId": 3,
+      "id": 11
+    },
+    {
+      "stepId": 12,
+      "ingredient": "hot sauce",
+      "units": "bottle",
+      "step_Amount": 1,
+      "recipeId": 3,
+      "id": 12
+    },
+    {
+      "stepId": 13,
+      "ingredient": "tortilla",
+      "units": "whole",
+      "step_Amount": 1,
+      "recipeId": 3,
+      "id": 13
+    },
+    {
+      "stepId": 14,
+      "ingredient": 1,
+      "units": 1,
+      "step_Amount": 11,
+      "recipeId": 4,
+      "id": 14
     }
   ]
 }

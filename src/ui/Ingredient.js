@@ -73,37 +73,43 @@
 
  		addAuis(obj)
  	},
+ 	navToProfile: function(id) {
+	    hashHistory.push(`/recipeProfile/${id}`)
+	},
  	render: function () {
  		return (
- 			<form onSubmit={this.updateAuis}>
-	 			<div>
-					<TextField
-			          id="step_Amount"
-			          hintText="Enter quantity here."
-			          floatingLabelText="1/4, 1/2, 1, 2..."
-			          fullWidth={true}          
-			          onChange={this.update}
-			          value={this.state.step_Amount}
-			        />
-			        <TextField
-			          id="units"
-			          hintText="Enter unit of measure here."
-			          floatingLabelText="Cup, TBS, tsp, lb., etc..."
-			          fullWidth={true}          
-			          onChange={this.update}
-			          value={this.state.units}
-			        />
-			        <TextField
-			          id="ingredient"
-			          hintText="Enter ingredient here."
-			          floatingLabelText="Ingredient"
-			          fullWidth={true}          
-			          onChange={this.update}
-			          value={this.state.ingredient}
-			        />
-			   		<RaisedButton type="submit" label="Add Ingredient" primary={true} style={style.button} />	
-	 			</div>
- 			</form>		
+ 			<div>
+	 			<form onSubmit={this.updateAuis}>
+		 			<div>
+						<TextField
+				          id="step_Amount"
+				          hintText="Enter quantity here."
+				          floatingLabelText="1/4, 1/2, 1, 2..."
+				          fullWidth={true}          
+				          onChange={this.update}
+				          value={this.state.step_Amount}
+				        />
+				        <TextField
+				          id="units"
+				          hintText="Enter unit of measure here."
+				          floatingLabelText="Cup, TBS, tsp, lb., etc..."
+				          fullWidth={true}          
+				          onChange={this.update}
+				          value={this.state.units}
+				        />
+				        <TextField
+				          id="ingredient"
+				          hintText="Enter ingredient here."
+				          floatingLabelText="Ingredient"
+				          fullWidth={true}          
+				          onChange={this.update}
+				          value={this.state.ingredient}
+				        />
+				   		<RaisedButton type="submit" label="Add Ingredient" primary={true} style={style.button} />	
+		 			</div>
+	 			</form>	
+	 			<RaisedButton type="submit" label="Add Recipe" primary={true} style={style.button} onClick={this.navToProfile}/>
+	 		</div>	
  		)		
  	}
  })
