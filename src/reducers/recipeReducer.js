@@ -6,7 +6,8 @@ const DefaultState = {
 	favorite_Recipes: [],
 	public_Recipes: [],
 	popular_Recipes: [],
-	my_Pantry: []
+	my_Pantry: [],
+	aui: []
 }
 
 export default function(state=DefaultState, action) {
@@ -48,7 +49,7 @@ export default function(state=DefaultState, action) {
 		case 'GET_AUIS':
 			return{...state, auis: action.aui}
 		case 'ADD_AUIS':
-			return{...state, auis: action.auis}
+			return{...state, aui: action.aui}
 		default:
 			return state
 

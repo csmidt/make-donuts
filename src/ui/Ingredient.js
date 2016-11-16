@@ -1,6 +1,6 @@
  import React from 'react'
  import { Link, hashHistory } from 'react-router'
- import { addAuis, getAuis} from 'api/recipesapi'
+ import { addAuis } from 'api/recipesapi'
  import * as actions from 'actions'
  import store from 'store'
  import MenuItem from 'material-ui/MenuItem'
@@ -21,10 +21,12 @@
  const IngredientContainer = React.createClass({
  	getInitialState: function() {
  		return {
- 			auis: []
+ 			auis: [],
+ 			recipeId: ''
  		}
  	},
  	componentWillMount: function () {
+
  		this.unsubscribe = store.subscribe(() => {
  			const appState = store.getState()
  			this.setState({
@@ -37,7 +39,7 @@
  	},
  	render: function () {
  		return (
- 			<Ingredient stepId={this.props.params.stepid} auis={this.state.auis} />
+ 			<Ingredient stepId={this.props.params.stepId} auis={this.state.auis} recipeId={this.props.params.recipeId} />
  		)
  	}
  })
@@ -61,12 +63,13 @@
  			stepId: this.props.stepId,
  			ingredient: this.state.ingredient,
  			units: this.state.units,
- 			step_Amount: this.state.step_Amount
+ 			step_Amount: this.state.step_Amount,
+ 			recipeId: this.props.recipeId
  		}
- 		// console.log('stepId', obj.stepId)
- 		// console.log('ingredient', obj.ingredient)
- 		// console.log('units', obj.units)
- 		// console.log('step_Amount', obj.step_Amount)
+ 		console.log('stepId', obj.stepId)
+ 		console.log('ingredient', obj.ingredient)
+ 		console.log('units', obj.units)
+ 		console.log('step_Amount', obj.step_Amount)
 
  		addAuis(obj)
  	},

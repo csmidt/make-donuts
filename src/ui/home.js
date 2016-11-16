@@ -38,7 +38,7 @@ const SummaryContainer =  React.createClass({
 const SummaryView = React.createClass({
  navToAddRecipe: function(e) {
   e.preventDefault()
-  hashHistory.push("/addRecipe/1")
+  hashHistory.push("/addRecipe")
   },
 
   navToRecipeProfile: function(e) {

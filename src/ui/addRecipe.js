@@ -99,9 +99,6 @@ const AddRecipe = React.createClass({
 		this.setState({
 			degree_Units: value
 		})
-
-		console.log("COMPONENT FUNCTION: updateRecipes()", obj)
-
 	},
 
 
@@ -115,7 +112,7 @@ const AddRecipe = React.createClass({
                       hintText="Add Image url here"
                       floatingLabelText="Add image URL here."
                       fullWidth={true}
-                      value={this.state.image}
+                      value={this.state.value}
                       onChange={this.update}
                     />
 				    <TextField
@@ -123,7 +120,7 @@ const AddRecipe = React.createClass({
 				      hintText="Recipe Name"
 				      floatingLabelText="Enter recipe name here."
 				      fullWidth={true}
-				      value={this.state.recipe_Name}
+				      value={this.state.value}
 				      onChange={this.update}
 				    />
 
@@ -132,7 +129,7 @@ const AddRecipe = React.createClass({
 				      hintText="By"
 				      floatingLabelText="Enter Recipe Author Here"
 				      fullWidth={true}
-				      value={this.state.recipe_By}
+				      value={this.state.value}
 				      onChange={this.update}
 				    />
 
@@ -141,13 +138,13 @@ const AddRecipe = React.createClass({
 				      hintText="By"
 				      floatingLabelText="Enter chef's name here."
 				      fullWidth={true}
-				      value={this.state.by}
+				      value={this.state.value}
 				      onChange={this.update}
 				    />
 				     <div className="scope"
 				       id="scope"
 				       style={styles.block}
-				       value={this.state.scope}
+				       value={this.state.value}
 			           onChange={this.scopeChange}>
 					     <Checkbox label="Make Public" style={styles.checkbox}/>
 					     <Checkbox label="Make Private" style={styles.checkbox}/>
@@ -155,7 +152,7 @@ const AddRecipe = React.createClass({
 					<SelectField
 					  id="recipe_Type"
 			          floatingLabelText="Recipe Type"
-			          value={this.state.recipe_Type}
+			          value={this.state.value}
 			          onChange={this.recipeChange}
 			          style={styles.customWidth}>
 				          <MenuItem value="breakfast" primaryText="Breakfast" />
@@ -168,7 +165,7 @@ const AddRecipe = React.createClass({
 				      hintText="Prep Time"
 					  floatingLabelText="Enter prep time here."
 					  fullWidth={true}
-					  value={this.state.prep_Time}
+					  value={this.state.value}
 					  onChange={this.update}
 					/>
 				    <TextField
@@ -176,7 +173,7 @@ const AddRecipe = React.createClass({
                       hintText="Cook Time"
                       floatingLabelText="Enter cook time here."
                       fullWidth={true}
-                      value={this.state.cook_Time}
+                      value={this.state.value}
                       onChange={this.update}
                     />
                     <TextField
@@ -184,13 +181,13 @@ const AddRecipe = React.createClass({
                       hintText="Cook Temp"
                       floatingLabelText="Enter cook temperature here."
                       fullWidth={true}
-                      value={this.state.cook_Temp}
+                      value={this.state.value}
                       onChange={this.update}
                     />
                     <SelectField
                       id="degree_Units"
 			          floatingLabelText="°F"
-			          value={this.state.degree_Units}
+			          value={this.state.value}
 			          onChange={this.degreeChange}
 			          style={styles.customWidth}>
 				          <MenuItem value="Fahrenheit" primaryText="Fahrenheit" />
@@ -201,14 +198,14 @@ const AddRecipe = React.createClass({
                       hintText="Amount"
                       floatingLabelText="Enter recipe yeild amount here."
                       fullWidth={true}
-                      value={this.state.portion_Amount}  
+                      value={this.state.value}  
                       onChange={this.update} />
-                    <TextField
+                    <TextField	
                       id="portion_Type"
                       hintText="Type"
                       floatingLabelText="Cookies, loaves, etc..."
                       fullWidth={true}
-                      value={this.state.portion_Type}
+                      value={this.state.value}
                       onChange={this.update}
                     />
                     <h3> Personal Notes </h3>
@@ -217,11 +214,11 @@ const AddRecipe = React.createClass({
                       hintText="Personal Notes"
                       floatingLabelText="Tell us about your recipe!"
                       fullWidth={true}
-                      value={this.state.personal_Notes}
+                      value={this.state.value}
                       onChange={this.update}/>
                     <RaisedButton type="submit" label="Add Directions" primary={true} style={style.button}/>
 
-				</form>
+					</form>
 				
 			</div>	
 		)

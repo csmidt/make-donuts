@@ -70,12 +70,6 @@ const StepsView = React.createClass ({
 		return (
 			<div>
 				<form onSubmit={this.updateSteps}>
-					{this.props.steps.map((step, i) => (
-						<div key={step.id}className="step">
-							<h4>Step {i + 1}</h4>
-							<p>{step.directions}</p>
-						</div>
-					))}	
 						<TextField
 				          id="directions"
 				          hintText="Enter directions here."
