@@ -1,221 +1,168 @@
 {
   "recipes": [
     {
-      "id": 1,
-      "recipeId": 1,
-      "image": "https://media-cdn.tripadvisor.com/media/photo-s/02/e1/9b/54/usa-cowboy-tacos.jpg",
-      "recipe_Name": "USA Cowboy Tacos",
-      "by": "Blanca Cummings",
-      "scope": "Public",
-      "recipe_Type": "Lunch",
-      "recipeCategoryId": "Favorite",
-      "prep_Time": 20,
-      "cook_Time": 20,
-      "cook_Temp": 100,
-      "degree_Units": "C",
-      "portion_Amount": 4,
-      "portion_Type": "Servings",
-      "personal_Notes": "Voluptatem est eius quibusdam rerum. Commodi qui sed fugit hic consectetur eum nam odit. Vero aperiam quisquam eos velit ipsam nihil. Voluptatem sunt quia cum maxime tenetur quo quasi non magni. Veritatis atque numquam sed sint eveniet ipsam perferendis."
-    },
-    {
-      "id": 2,
-      "image": "http://images-gmi-pmc.edge-generalmills.com/f87191f1-589e-4bdc-8662-50fdc23e3f59.jpg",
-      "recipe_Name": "Lasagna",
-      "by": "Savion Hermann",
-      "scope": "Public",
-      "recipe_Type": "Breakfast",
-      "recipeCategoryId": "Popular",
-      "prep_Time": 74465,
-      "cook_Time": 44861,
-      "cook_Temp": 85817,
-      "degree_Units": "C",
-      "portion_Amount": 95282,
-      "portion_Type": "Loafs",
-      "personal_Notes": "Ut reprehenderit est placeat iusto. Temporibus officiis provident veritatis et enim voluptatem nihil sunt. Quia impedit molestias hic et voluptatibus a omnis rem. Deleniti et voluptas reiciendis totam et et et perferendis. Sed nobis velit iusto nemo."
-    },
-    {
-      "image": "http://paleoleap.com/pictures/j-paleo/korean-short-ribs/korean-short-ribs-main.jpg",
-      "recipe_Name": "Korean Short Ribs",
-      "by": "Carrie",
-      "scope": {
-        "isTrusted": false
-      },
-      "recipeCategoryId": "Popular",
-      "recipe_Type": "dinner",
-      "degree_Units": "",
-      "prep_Time": "20 min",
-      "cook_Time": "2 hours",
-      "cook_Temp": 250,
-      "portion_Amount": 4,
-      "portion_Type": "servings",
-      "personal_Notes": "Eat!",
-      "id": 7
-    },
-    {
       "image": "https://i.ytimg.com/vi/1P6fXQSdk1w/maxresdefault.jpg",
-      "recipe_Name": "Chicken and Dumplings",
-      "by": "Carrie",
+      "recipe_Name": "chicken and dumplings",
+      "by": "lee",
       "scope": "",
-      "recipeCategoryId": "Popular",
       "recipe_Type": "dinner",
       "degree_Units": "",
-      "prep_Time": "30 min",
-      "cook_Time": "30 min",
-      "cook_Temp": "mediumd",
-      "portion_Amount": 8,
-      "portion_Type": "Servings",
-      "personal_Notes": "Delicious!",
-      "id": 8
+      "prep_Time": "300 mins",
+      "cook_Time": "400 mins",
+      "cook_Temp": 300,
+      "portion_Amount": 1,
+      "portion_Type": "loaves",
+      "personal_Notes": "its a pain the ass. go around the other way. it just takes a s long. i know the exits there are real far apart",
+      "id": 1
     },
     {
       "image": "http://www.fmbpune.com/wp-content/uploads/2015/07/grilled-teriyaki-fish-en-f2afbef5-2cb6-4e83-941b-94f745b605671.jpg",
-      "recipe_Name": "Grilled Salmon",
-      "by": "Carrie",
-      "scope": "",
-      "recipe_Type": "lunch",
-      "recipeCategoryId": "Popular",
-      "degree_Units": "",
-      "prep_Time": "20 min",
-      "cook_Time": "20 min",
-      "cook_Temp": "medium",
-      "portion_Amount": 1,
-      "portion_Type": "serving",
-      "personal_Notes": "Healthy Dinner",
-      "id": 9
-    },
-    {
-      "image": "https://images.heb.com/is/image/HEBGrocery/article/Grill-Times-Test-Image_01.jpg",
-      "recipe_Name": "Grilled Steak",
-      "by": "Carrie",
-      "scope": "",
-      "recipeCategoryId": "Popular",
-      "recipe_Type": "",
-      "degree_Units": "",
-      "prep_Time": "20 min",
-      "cook_Time": "20 min",
-      "cook_Temp": "medium",
-      "portion_Amount": "1 ",
-      "portion_Type": "serving",
-      "personal_Notes": "yummy yummy",
-      "id": 10
-    },
-    {
-      "image": "http://farm6.static.flickr.com/5014/5521515498_ffaeaee0e2_z.jpg",
-      "recipe_Name": "Coconut Macaroons",
-      "by": "Carrie",
+      "recipe_Name": "Grilled victory salmon",
+      "by": "carrie",
       "scope": "",
       "recipe_Type": "dessert",
-      "recipeCategoryId": "Popular",
       "degree_Units": "",
-      "prep_Time": "20 min",
-      "cook_Time": "25 min",
-      "cook_Temp": 350,
-      "portion_Amount": 3,
-      "portion_Type": "dozen",
-      "personal_Notes": "Eat with coffee",
-      "id": 11
-    },
-    {
-      "image": "https://images-gmi-pmc.edge-generalmills.com/eb4781cc-f3a9-4344-ae02-c0c45769b1f9.jpg",
-      "recipe_Name": "Bacon Cheddar Quiche",
-      "by": "Carrie",
-      "scope": "",
-      "recipe_Type": "breakfast",
-      "recipeCategoryId": "Popular",
-      "degree_Units": "",
-      "prep_Time": "30 min",
-      "cook_Time": "60 min",
-      "cook_Temp": 350,
-      "portion_Amount": 8,
-      "portion_Type": "Servings",
-      "personal_Notes": "Pair with fruit.",
-      "id": 12
+      "prep_Time": "forever",
+      "cook_Time": "min",
+      "cook_Temp": 50,
+      "portion_Amount": 2,
+      "portion_Type": "fishies",
+      "personal_Notes": "pleae be right",
+      "id": 2
     }
   ],
-
   "steps": [
     {
-      "id": 3,
       "recipeId": 1,
-      "stepNumber": 1,
-      "directions": "Reiciendis quis aut ad nemo. Est excepturi corrupti autem. Mollitia qui laudantium saepe eos. Iste non laboriosam atque quo eum sit magnam eum iusto."
+      "directions": "bake",
+      "id": 1
     },
     {
-      "id": 4,
-      "recipeId": 2,
-      "stepNumber": 1,
-      "directions": "Adipisci quaerat ea fugiat maxime. Inventore et eligendi temporibus enim nihil maiores et id. Commodi dolorum ut provident rerum quis ullam aut. Iste ut sunt. Quo praesentium adipisci accusamus."
-    },     
+      "recipeId": 1,
+      "directions": "broil",
+      "id": 2
+    },
     {
-
-      "id": 5,
-      "recipeId": 2,
-      "stepNumber": 2,
-      "directions": "Adipisci quaerat ea fugiat maxime. Inventore et eligendi temporibus enim nihil maiores et id. Commodi dolorum ut provident rerum quis ullam aut. Iste ut sunt. Quo praesentium adipisci accusamus."
-    },       
+      "recipeId": 1,
+      "directions": "fry",
+      "id": 3
+    },
     {
-      "recipeId": 11,
-      "directions": "mix coconut and things together",
-      "stepNumber": 1,
+      "recipeId": 1,
+      "directions": "sautee",
+      "id": 4
+    },
+    {
+      "recipeId": 2,
+      "directions": "broil",
+      "id": 5
+    },
+    {
+      "recipeId": 2,
+      "directions": "bake",
+      "id": 6
+    },
+    {
+      "recipeId": 2,
+      "directions": "fry",
       "id": 7
     },
     {
-      "recipeId": 11,
-      "directions": "bake for 20 min. ",
-      "stepNumber": 2,
+      "recipeId": 2,
+      "directions": "dismember",
       "id": 8
     },
     {
-      "recipeId": 11,
-      "stepNumber": 3,
-      "directions": "cook me",
+      "recipeId": 2,
+      "directions": "blend",
       "id": 9
     },
     {
-      "recipeId": 11,
-      "stepNumber": 4,
-      "directions": "cook me",
+      "recipeId": 2,
+      "directions": "vacuum pack",
       "id": 10
     }
   ],
-            
   "auis": [
     {
-      "id": 6,
       "stepId": 1,
-      "step_Amount": 2,
-      "units": "cups",
-      "ingredient": "Beef"  
+      "ingredient": "steak",
+      "units": "packets",
+      "step_Amount": "3 ",
+      "recipeId": 1,
+      "id": 1
     },
     {
-      "id": 7,
-      "stepId": 1,
-      "step_Amount": 2,
-      "units": "cups",
-      "ingredient": "sweet sour sauce"
-    },     
-    {
-      "id": 8,
-      "stepId": 1,
-      "step_Amount": 3,
-      "units": "sticks",
-      "ingredient": "butter"  
-    },
-    {
-      "id": 9,
       "stepId": 2,
-      "step_Amount": "1/2",
-      "units": "cups",
-      "ingredient": "sugar"
+      "ingredient": "carrots",
+      "units": "units",
+      "step_Amount": 25,
+      "recipeId": 1,
+      "id": 2
     },
     {
-      "id": 10,
-      "stepId": 1,
-      "step_Amount": "1/2",
-      "units": "loafs",
-      "ingredient": "sweet sour sauce"
-    }       
+      "stepId": 3,
+      "ingredient": "dough",
+      "units": "dozen",
+      "step_Amount": 1,
+      "recipeId": 1,
+      "id": 3
+    },
+    {
+      "stepId": 4,
+      "ingredient": "onion",
+      "units": "whole",
+      "step_Amount": 1,
+      "recipeId": 1,
+      "id": 4
+    },
+    {
+      "stepId": 5,
+      "ingredient": "lemon",
+      "units": "half",
+      "step_Amount": 1,
+      "recipeId": 2,
+      "id": 5
+    },
+    {
+      "stepId": 6,
+      "ingredient": "potatoes",
+      "units": "whole",
+      "step_Amount": 2,
+      "recipeId": 2,
+      "id": 6
+    },
+    {
+      "stepId": 7,
+      "ingredient": "bacon",
+      "units": "lb",
+      "step_Amount": 1,
+      "recipeId": 2,
+      "id": 7
+    },
+    {
+      "stepId": 8,
+      "ingredient": "of fish",
+      "units": "head",
+      "step_Amount": 1,
+      "recipeId": 2,
+      "id": 8
+    },
+    {
+      "stepId": 9,
+      "ingredient": "salmon",
+      "units": "tail",
+      "step_Amount": 1,
+      "recipeId": 2,
+      "id": 9
+    },
+    {
+      "stepId": 10,
+      "ingredient": "eyes",
+      "units": "fish",
+      "step_Amount": "3 ",
+      "recipeId": 2,
+      "id": 10
+    }
   ]
 }
-
-  

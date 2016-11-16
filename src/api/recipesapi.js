@@ -90,7 +90,7 @@ export function getSteps(recipeId) {
 
 export function addStep(obj) {
 	return axios.post("steps", obj).then(resp => {
-		hashHistory.push("/ingredient/" + resp.data.id)
+		hashHistory.push(`/ingredient/recipeId/${resp.data.recipeId}/stepId/${resp.data.id}`)
 
 		// getSteps(obj.recipeId).then(resp2 => {
 		// 	store.dispatch ({
@@ -104,7 +104,11 @@ export function addStep(obj) {
 
 export function addAuis(obj) {
 	return axios.post("auis", obj).then(resp => {
-		hashHistory.push("/steps/" + resp.data.id)
+		hashHistory.push("/steps/" + obj.recipeId)
+		// store.dispatch({
+		// 	type: 'ADD_AUIS',
+		// 	aui: resp.data
+		// })
 
 		// getAuis(obj.stepsId).then(resp2 => {
 		// 	store.dispatch ({
@@ -126,8 +130,8 @@ export function addAuis(obj) {
 //API request from Carrie via merge on 11.12.16
 
 
-export function getAUIs() {
-	return axios.get("auis").then(resp => {
+export function getAUIs(a) {
+	return axios.get(`auis?recipeId=${a}`).then(resp => {
 		console.log('getAUIs()',resp.data)
 		store.dispatch({
 			type: 'GET_AUIS',
@@ -144,4 +148,4 @@ export function getStep(id) {
 		})
 	})
 }
-
+ 	

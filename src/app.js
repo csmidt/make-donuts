@@ -16,9 +16,10 @@ import Home from 'ui/home'
 import AddRecipe from 'ui/addRecipe'
 import RecipeProfile from 'ui/recipeProfile'
 import Steps from 'ui/Steps'
-// import Ingredient from 'ui/Ingredient'
+import Ingredient from 'ui/Ingredient'
 import GridListExample from 'ui/gridListExample'
 import AdjustRecipe from 'ui/adjustRecipe'
+
 
 
 ReactDOM.render((
@@ -27,8 +28,9 @@ ReactDOM.render((
 			<Route component={ App }>
 				 <Route component={ Home } path="/" />
 				 <Route component={ GridListExample } path="/gridListExample"/>
-				 <Route component={ AddRecipe } path="/addRecipe/:id" />
+				 <Route component={ AddRecipe } path="/addRecipe" />
 				 <Route component={ Steps } path="/steps/:recipeId" />
+				 <Route component={ Ingredient} path="/ingredient/recipeId/:recipeId/stepId/:stepId" />
 				 <Route component={ RecipeProfile } path="/recipeProfile/:id"/>
 				 <Route component={ AdjustRecipe } path="/adjustRecipe/:id"/>
 			</Route>

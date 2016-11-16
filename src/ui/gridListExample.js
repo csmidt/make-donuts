@@ -4,6 +4,7 @@ import IconButton from 'material-ui/IconButton';
 import StarBorder from 'material-ui/svg-icons/toggle/star-border';
 import { getRecipes, getFavoriteRecipes, getPublicRecipes, getPopularRecipes, getMyPantry } from 'api/recipesapi'
 import store from 'store'
+import { hashHistory } from 'react-router'
 
 const GridListExampleContainer = React.createClass({
   getInitialState: function() { 
@@ -41,8 +42,13 @@ const GridListExampleContainer = React.createClass({
 
   render: function() {
     return (
-      <GridListExampleSingleLine recipes={this.state.recipes} favorite_Recipes={this.state.favorite_Recipes} 
-      public_Recipes={this.state.public_Recipes} popular_Recipes={this.state.popular_Recipes} my_Pantry={this.state.my_Pantry} />
+      <GridListExampleSingleLine 
+        recipes={this.state.recipes} 
+        favorite_Recipes={this.state.favorite_Recipes} 
+        public_Recipes={this.state.public_Recipes} 
+        popular_Recipes={this.state.popular_Recipes} 
+        my_Pantry={this.state.my_Pantry} 
+        />
     )
   }
 })
@@ -62,6 +68,11 @@ const styles = {
 };
 
 const GridListExampleSingleLine = React.createClass({
+
+  link: function(id) {
+    hashHistory.push(`/recipeProfile/${id}`)
+  },
+
   render: function() {
     return (
       <div className="gridView">
@@ -73,8 +84,9 @@ const GridListExampleSingleLine = React.createClass({
                 key={`i + ${recipe.id}`}
                 title={recipe.recipe_Name}
                 actionIcon={<IconButton><StarBorder color="white" /></IconButton>}
-              >
-                <img src={recipe.image} />
+                onClick={() => this.link(recipe.id)}
+                >
+                <img src={recipe.image}/>
               </GridTile>  
             ))}
           </GridList>
@@ -102,7 +114,7 @@ const GridListExampleSingleLine = React.createClass({
                 title={recipe.recipe_Name}
                 actionIcon={<IconButton><StarBorder color="white" /></IconButton>}
               >
-                <img src={recipe.image} />
+                  <img src={recipe.image} />
               </GridTile> 
             ))}
           </GridList>

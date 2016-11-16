@@ -28,7 +28,7 @@ const RecipeProfileContainer = React.createClass({
 
 	componentWillMount: function() { 
 		getRecipe(this.props.params.id)
-    getAUIs()
+    getAUIs(this.props.params.id)
     getStep(this.props.params.id)
 
     this.unsubscribe = store.subscribe(() => {
@@ -189,11 +189,11 @@ const SummaryHorizontalBar = React.createClass({
         </div>
         <div className="table">
           <div className="topRow">Prep Time</div>
-          <div className="bottomRow">{this.props.prep_Time}min</div>
+          <div className="bottomRow">{this.props.prep_Time}</div>
         </div>
         <div className="table">
           <div className="topRow">Cook Time</div>
-          <div className="bottomRow">{this.props.cook_Time}min</div>
+          <div className="bottomRow">{this.props.cook_Time}</div>
         </div>
         <div className="table">
           <div className="topRow">Cook Temp</div>
@@ -241,24 +241,22 @@ const RecipeDirections = React.createClass({
     return (
         <div className="recipeDirections">
            {this.props.step.map (item => {
-            {var stepNumber= item.stepNumber}
+            {var stepNumber = item.id}
             return(
               <div key={"d" + item.id} className="fullStep">
-                <div className="recipeDiretionsHeader"><span className="stepHeader">Step {item.stepNumber}</span></div>
+                <div className="recipeDiretionsHeader"><span className="stepHeader">Step {item.id}</span></div>
                 <div className="recipeDirectionsContent">
                   <div className="recipeInsturctions">{item.directions}</div>
                     <table className="recipeIngredientTable">
                       <tbody> 
                         {this.props.AUIs.map (item => {
-                          console.log('item.stepId', item.stepId)
-                          if (stepNumber === item.stepId) {
+                           if( stepNumber === item.stepId) 
                             return (
                               <tr key={"a" + item.id} className="recipeIngredientRow">
                                 <td key={"b" + item.id} className="recipeIngredientCell1"><span className="ingredientCell1">{item.step_Amount} {item.units}</span></td>
                                 <td key={"c" + item.id} className="recipeIngredientCell2">{item.ingredient}</td>
                               </tr> 
                             )
-                          }                           
                         })}
                       </tbody>            
                     </table>
