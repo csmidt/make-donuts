@@ -367,3 +367,7 @@ td {
 	height: 30px;
 	width: 200px;
 }
+
+.marginAuto {
+	margin: auto;
+}
