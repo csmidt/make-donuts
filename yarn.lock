@@ -1743,13 +1743,13 @@ extsprintf@1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/extsprintf/-/extsprintf-1.0.2.tgz#e1080e0658e300b06294990cc70e1502235fd550"
 
-Faker:
-  version "0.7.2"
-  resolved "https://registry.yarnpkg.com/Faker/-/Faker-0.7.2.tgz#c2474bc77bb1d78018b6877d307bd7fdf082fb14"
-
 faker:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/faker/-/faker-3.1.0.tgz#0f908faf4e6ec02524e54a57e432c5c013e08c9f"
+
+Faker:
+  version "0.7.2"
+  resolved "https://registry.yarnpkg.com/Faker/-/Faker-0.7.2.tgz#c2474bc77bb1d78018b6877d307bd7fdf082fb14"
 
 fancy-log@^1.1.0:
   version "1.2.0"
@@ -3458,6 +3458,10 @@ normalize-path@^2.0.1:
 normalize-range@^0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/normalize-range/-/normalize-range-0.1.2.tgz#2d10c06bdfd312ea9777695a4d28439456b75942"
+
+normalize-scss:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/normalize-scss/-/normalize-scss-6.0.0.tgz#5e94fc91e3bb279933ae8aaa511ad0912a0cb44d"
 
 normalize-url@^1.4.0:
   version "1.7.0"
