@@ -26,7 +26,6 @@
  		}
  	},
  	componentWillMount: function () {
-
  		this.unsubscribe = store.subscribe(() => {
  			const appState = store.getState()
  			this.setState({
