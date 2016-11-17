@@ -22,7 +22,9 @@ export default React.createClass({
               <li> My Pantry</li>
             </ul>
           </div>
-          <div>{this.props.children}</div>
+          <div className="marginAuto">
+            {this.props.children}
+          </div>
         </main>
       </div>
     )

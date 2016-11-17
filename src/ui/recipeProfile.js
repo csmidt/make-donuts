@@ -224,8 +224,10 @@ const RecipeCard = React.createClass({
               backgroundColor="#504f4f"
               labelColor="#FFFFFF"
               icon={<FontIcon className="material-icons" color="#cccccc">create</FontIcon>}
-              href={"http://localhost:8000/#/adjustRecipe/" + this.props.recipe_Id }
+              href="http://localhost:8000/adjustRecipe/1"
               />
+          
+
             </td>
           </tr>
             {this.props.AUIs.map (item => {
@@ -332,7 +334,7 @@ const SubmitButtons = React.createClass({
 export default RecipeProfileContainer
 
  
-
+// "http://localhost:8000/adjustRecipe/recipeId/" + this.props.recipe_Id
 
 // <tr className="recipeIngredientRow">
   // <td className="recipeIngredientCell1"><span className="ingredientCell1">1/2 cup</span></td>

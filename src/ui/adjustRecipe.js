@@ -52,7 +52,7 @@ const adjustRecipeContainer = React.createClass({
 		      fullWidth={true}
 		      onChange={this.update}
 		    	/>
-	    	    	</div>
+	    	</div>
 		)
 	}
 })
