@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router'
+import { Link, hashHistory } from 'react-router'
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card'
 import RaisedButton from 'material-ui/RaisedButton'
 import FontIcon from 'material-ui/FontIcon'
@@ -154,6 +154,12 @@ const styles = {
   }
 
 }
+const style = {
+   margin: 12,
+   button: {
+    backgroundColor: "#00FF00"  
+   }
+}
 
 
 const RecipeProfileHeader = React.createClass({
@@ -288,6 +294,15 @@ const PersonalNotes = React.createClass({
 })
 
 const SubmitButtons = React.createClass({
+  navToHome: function(e) {
+      e.preventDefault()
+      hashHistory.push("/gridListExample")
+  },
+
+  navToGridList: function(e) {
+    e.preventDefault()
+    hashHistory.push("/gridListExample")
+  },
   render: function() {
     return (
       <div className="submitButtonContainer">
@@ -301,6 +316,14 @@ const SubmitButtons = React.createClass({
             backgroundColor="#504f4f"
             labelColor="#FFFFFF"
             />
+        <div className="navHome">
+           <RaisedButton 
+              type="submit" 
+              label="Back to Home" 
+              primary={true} 
+              style={style.button} 
+              onClick={this.navToHome}/>
+        </div>
       </div>
     )
   }

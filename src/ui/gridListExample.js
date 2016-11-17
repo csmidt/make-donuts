@@ -1,7 +1,8 @@
-import React from 'react';
-import {GridList, GridTile} from 'material-ui/GridList';
-import IconButton from 'material-ui/IconButton';
-import StarBorder from 'material-ui/svg-icons/toggle/star-border';
+import React from 'react'
+import {GridList, GridTile} from 'material-ui/GridList'
+import IconButton from 'material-ui/IconButton'
+import StarBorder from 'material-ui/svg-icons/toggle/star-border'
+import RaisedButton from 'material-ui/RaisedButton'
 import { getRecipes, getFavoriteRecipes, getPublicRecipes, 
          getPopularRecipes, getMyPantry } from 'api/recipesapi'
 import store from 'store'
@@ -66,13 +67,24 @@ const styles = {
     overflowX: 'auto',
     width: '1000px',
     marginleft: '20px'
+  }  
+}
+
+const style = {
+    margin: 12,
+    button: {
+      backgroundColor: "#00FF00"  
+    }
   }
-};
 
 const GridListExampleSingleLine = React.createClass({
 
   link: function(id) {
     hashHistory.push(`/recipeProfile/${id}`)
+  },
+  navToAddRecipe: function(e) {
+    e.preventDefault()
+    hashHistory.push("/addRecipe")
   },
 
   render: function() {
@@ -148,6 +160,9 @@ const GridListExampleSingleLine = React.createClass({
               </GridTile>  
             ))}
           </GridList>
+        </div>
+        <div className='navToAddRecipe'>
+         <RaisedButton type="submit" label="Add Recipe" primary={true} style={style.button} onClick={this.navToAddRecipe}/>
         </div>
       </div>
     )
