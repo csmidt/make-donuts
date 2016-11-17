@@ -89,6 +89,10 @@ main {
     font-family: 'Overlock', cursive;
  }
 
+ .navToAddRecipe {
+ 	margin-top: 10px;
+ }
+
 .formfields {
 	display: flex;
 	flex-wrap: wrap;
@@ -144,6 +148,10 @@ h3 {
 .recipeProfileHeaderTitle {
 	font-size: 25px !important;
 
+}
+
+.recipeProfileHeader {
+	margin: 16px 96px !important;
 }
 
 .recipeProfileContainer {
@@ -348,7 +356,11 @@ td {
 	transition: color 1s;
 	transition: background 2s;
 }
+.navHome {
+	margin-left: 330px;
+    padding-top: 50px;
 
+}
 
 .recipeType {
 	border:1px solid #aaa;
